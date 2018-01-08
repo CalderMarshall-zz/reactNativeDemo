@@ -19,6 +19,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@shoutem/ui": "^0.22.4",
     "expo": "^23.0.4",
     "native-base": "^2.3.6",
     "react": "16.0.0",

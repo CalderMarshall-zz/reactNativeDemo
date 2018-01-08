@@ -74,7 +74,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <Stack key="root"  hideNavBar showLabel={false} style={style.tabBarStyle}>
-                <Scene tabs style={style.tabBarStyle} >
+                <Scene tabs style={style.tabBarStyle} key="main" >
                     <Scene
                         key="home"
                         hideNavBar
