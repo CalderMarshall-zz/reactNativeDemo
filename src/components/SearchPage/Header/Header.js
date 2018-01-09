@@ -11,17 +11,18 @@ import {
 export default class Header extends Component {
   state = { search: '' }
   render() {
-    const style = { color: 'midnightblue', marginLeft: 8, marginRight: 8 }
     return (
       <View style={styles.container}>
         <View style={styles.form}>
-          <Text style={style}>[Logo]</Text>
+          <Text style={styles.text}>[Logo]</Text>
           <TextInput
             style={styles.input}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.text}
+            onChangeText={(search) => this.setState({search})}
+            value={this.state.search}
+            placeholder='Address, City, Zip'
+            placeholderTextColor='#787878'
           />
-          <Text style={style}>Filter</Text>
+          <Text style={styles.text}>Filter</Text>
         </View>
         <View style={styles.formBottom}>
           <Text style={{ marginLeft: 4, flex: 2 }}>5 Results</Text>
@@ -35,7 +36,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    marginTop: 40,
   },
 
   form: {
@@ -59,6 +60,15 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     flex: 2,
     margin: 2,
-    borderRadius: 3
+    borderRadius: 3,
+    padding: 4,
+    paddingLeft: 8,
+    fontSize: 20
+  },
+
+  text: {
+    color: 'midnightblue',
+    marginLeft: 8,
+    marginRight: 8
   }
 });
