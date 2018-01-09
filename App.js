@@ -9,8 +9,8 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <SearchPage />
-        {/* <ProductDetails /> */}
+        {/* <SearchPage /> */}
+        <ProductDetails />
         {/* <FilterSearch /> */}
       </View>
     );
