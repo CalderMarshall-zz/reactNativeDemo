@@ -17,7 +17,10 @@ export default class Header extends Component {
         <View style={styles.formBottom}>
           <Text style={{ marginLeft: 8, flex: 1 }}>5 Results</Text>
           {/* TODO: Fix that borderLeftWidth & borderLeftColor */}
-          <Text style={{ marginRight: 8 }}>[Share Icon]</Text>
+          <Image
+            style={{ marginRight: 8 }}
+            source={require('../../../assets/images/share-icon.jpg')}
+          />
         </View>
       </View>
     );
