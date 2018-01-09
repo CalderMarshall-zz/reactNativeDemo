@@ -1,0 +1,64 @@
+/* @flow */
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  Image
+} from 'react-native';
+
+export default class Header extends Component {
+  state = { search: '' }
+  render() {
+    const style = { color: 'midnightblue', marginLeft: 8, marginRight: 8 }
+    return (
+      <View style={styles.container}>
+        <View style={styles.form}>
+          <Text style={style}>[Logo]</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => this.setState({text})}
+            value={this.state.text}
+          />
+          <Text style={style}>Filter</Text>
+        </View>
+        <View style={styles.formBottom}>
+          <Text style={{ marginLeft: 4, flex: 2 }}>5 Results</Text>
+          {/* Fix that borderLeftWidth & borderLeftColor */}
+          <Text style={{ marginRight: 4, borderLeftWidth: 3, borderLeftColor: 'red' }}>[Share Icon]</Text>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 50,
+  },
+
+  form: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: 375,
+    height: 60
+  },
+
+  formBottom: {
+    height: 30,
+    width: 375,
+    backgroundColor: '#ddd',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+
+  input: {
+    height: 34,
+    borderColor: 'midnightblue',
+    borderWidth: 2,
+    flex: 2,
+    margin: 2,
+    borderRadius: 3
+  }
+});
