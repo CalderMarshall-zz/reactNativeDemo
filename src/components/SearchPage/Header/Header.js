@@ -3,31 +3,21 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   Image
 } from 'react-native';
 
+import SearchForm from './SearchForm/SearchForm';
+
 export default class Header extends Component {
-  state = { search: '' }
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.form}>
-          <Text style={styles.text}>[Logo]</Text>
-          <TextInput
-            style={styles.input}
-            onChangeText={(search) => this.setState({search})}
-            value={this.state.search}
-            placeholder='Address, City, Zip'
-            placeholderTextColor='#787878'
-          />
-          <Text style={styles.text}>Filter</Text>
-        </View>
+        <SearchForm />
         <View style={styles.formBottom}>
-          <Text style={{ marginLeft: 4, flex: 2 }}>5 Results</Text>
-          {/* Fix that borderLeftWidth & borderLeftColor */}
-          <Text style={{ marginRight: 4, borderLeftWidth: 3, borderLeftColor: 'red' }}>[Share Icon]</Text>
+          <Text style={{ marginLeft: 8, flex: 1 }}>5 Results</Text>
+          {/* TODO: Fix that borderLeftWidth & borderLeftColor */}
+          <Text style={{ marginRight: 8 }}>[Share Icon]</Text>
         </View>
       </View>
     );
@@ -36,39 +26,13 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginTop: 20,
   },
-
-  form: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    width: 375,
-    height: 60
-  },
-
   formBottom: {
     height: 30,
     width: 375,
     backgroundColor: '#ddd',
     flexDirection: 'row',
     alignItems: 'center'
-  },
-
-  input: {
-    height: 34,
-    borderColor: 'midnightblue',
-    borderWidth: 2,
-    flex: 2,
-    margin: 2,
-    borderRadius: 3,
-    padding: 4,
-    paddingLeft: 8,
-    fontSize: 20
-  },
-
-  text: {
-    color: 'midnightblue',
-    marginLeft: 8,
-    marginRight: 8
   }
 });
