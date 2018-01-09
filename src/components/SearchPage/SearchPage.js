@@ -15,8 +15,10 @@ export default class SearchPage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
-        <DisplayHomes />
+        <ScrollView>
+          <Header />
+          <DisplayHomes />
+        </ScrollView>
         <Navigation />
       </View>
     );

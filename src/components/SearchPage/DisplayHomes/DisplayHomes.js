@@ -28,7 +28,7 @@ export default class DisplayHomes extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.innerContainer}>
+        <View style={styles.innerContainer}>
           {homes.map((home, index) => (
             <View key={index}>
               <View style={styles.homeTextContainer}>
@@ -43,7 +43,7 @@ export default class DisplayHomes extends Component {
               />
             </View>
           ))}
-        </ScrollView>
+        </View>
       </View>
     );
   }
@@ -51,7 +51,7 @@ export default class DisplayHomes extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   homeImg: {
     width: 375,
