@@ -11,7 +11,7 @@ export default class Keywords extends Component {
   state = { filter: '' }
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Text style={{ fontSize: 18, marginTop: 10 }}>Keywords</Text>
         <View style={styles.form}>
           <TextInput
@@ -19,7 +19,7 @@ export default class Keywords extends Component {
             onChangeText={(filter) => this.setState({filter})}
             value={this.state.filter}
             placeholder='Garage, Pool, Gazebo, etc.'
-            placeholderTextColor='#787878'
+            placeholderTextColor='#C9C9C9'
           />
         </View>
       </View>
@@ -28,24 +28,21 @@ export default class Keywords extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
   form: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: 320,
+    width: 340,
     height: 60,
   },
   input: {
-    height: 34,
+    height: 40,
+    backgroundColor: '#FFFFFF',
     borderColor: 'midnightblue',
-    borderWidth: 2,
+    borderWidth: 0.75,
     flex: 2,
     margin: 2,
-    borderRadius: 3,
-    padding: 4,
-    paddingLeft: 8,
+    borderRadius: 2,
+    padding: 6,
     fontSize: 20
   }
 });

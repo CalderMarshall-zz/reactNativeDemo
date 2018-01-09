@@ -12,11 +12,11 @@ export default class HomeInfo extends Component {
     return (
       <View style={styles.container}>
         <View style={{ padding: 10 }}>
-          <Text>$392,000</Text>
-          <Text>Est. payment 1.1k/mo | Get Pre-qualified</Text>
-          <Text>230 E Court Dr SW,</Text>
-          <Text>Atlanta, GA 30331</Text>
-          <Text>5 bd | 4 ba | 3,947 sq ft</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 20 }}>$392,000</Text>
+          <Text style={{ fontSize: 13, color: '#797979'}}>Est. payment 1.1k/mo | Get Pre-qualified</Text>
+          <Text style={{ marginTop: 20, fontWeight: 'bold', fontSize: 15 }}>230 E Court Dr SW,</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Atlanta, GA 30331</Text>
+          <Text style={{ fontWeight: '400' }}>5 bd | 4 ba | 3,947 sq ft</Text>
         </View>
       </View>
     );

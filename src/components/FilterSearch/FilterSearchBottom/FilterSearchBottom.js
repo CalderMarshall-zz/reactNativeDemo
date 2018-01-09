@@ -14,6 +14,7 @@ export default class FilterSearchBottom extends Component {
     return (
       <View style={{ borderTopColor: 'midnightblue', borderTopWidth: 0.75, borderBottomWidth: 0.75, borderBottomColor: 'midnightblue', marginBottom: 100 }}>
         <FlatList
+          contentContainerStyle={{ alignContent: 'center' }}
           data={[
             {key: 'Buying Type'},
             {key: 'Home Type'},
@@ -24,7 +25,7 @@ export default class FilterSearchBottom extends Component {
           renderItem={({item}) => (
             <Text style={styles.listItem}>
               {item.key}
-              <Icon style={{ textAlign: 'right' }} name="angle-right" size={30} color="#900" />
+              <Icon style={{ position: 'absolute', right: 0 }} name="angle-right" size={25} color="#4E92DF" />
             </Text>
           )}
         />
@@ -36,12 +37,12 @@ export default class FilterSearchBottom extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center'
   },
   listItem: {
-    padding: 15,
-    borderWidth: 0.75,
+    padding: 10,
+    borderWidth: 0.5,
     borderColor: 'midnightblue',
-    fontSize: 18,
-    alignItems: 'center'
+    fontSize: 16,
   },
 });

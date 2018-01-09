@@ -24,9 +24,14 @@ export default class ProductDetails extends Component {
         />
         <HomeInfo />
         <HomeDesc />
-        <View style={{ padding: 10 }}>
-          <Text>Open More</Text>
-          <Text>No Open Houses Currently Scheduled</Text>
+        <View style={{ padding: 10, marginTop: 10 }}>
+          <Text style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 20 }}>Open More</Text>
+          <Text style={{
+            fontSize: 16,
+            marginBottom: 20,
+            fontWeight: '300',
+            letterSpacing: 0.3
+          }}>No Open Houses Currently Scheduled</Text>
         </View>
         <HomeDetails />
         <MortgageRates />
@@ -41,6 +46,8 @@ const styles = StyleSheet.create({
   },
   img: {
     width: 375,
-    height: 300
+    height: 300,
+    borderWidth: 0.2,
+    borderColor: '#032F5C'
   }
 });

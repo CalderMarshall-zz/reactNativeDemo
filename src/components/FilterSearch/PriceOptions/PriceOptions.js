@@ -28,6 +28,7 @@ export default class Price extends Component {
           onValueChanage={this.change}
           value={this.state.value}
         />
+        <Text>Adjust desired price for Home</Text>
       </View>
     );
   }

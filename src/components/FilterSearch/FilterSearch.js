@@ -25,7 +25,11 @@ export default class FilterSearch extends Component {
           <Text style={{ paddingLeft: 50, paddingRight: 50, fontSize: 25 }}>Filter Search</Text>
           <Text style={{ fontSize: 18, marginRight: 20 }}>Apply</Text>
         </View>
-        <View style={{ backgroundColor: '#efefef', width: 375, padding: 20 }}>
+        <View style={{
+          backgroundColor: '#efefef',
+          width: 375,
+          padding: 20
+        }}>
           <KeywordSearch />
           <PriceOptions />
           <BedroomOptions />
@@ -45,10 +49,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20
-  },
-  listBdItem: {
-    borderColor: 'red',
-    borderWidth: 2
+    paddingBottom: 20,
+    borderBottomColor: '#032A5E',
+    borderBottomWidth: 1
   }
 });

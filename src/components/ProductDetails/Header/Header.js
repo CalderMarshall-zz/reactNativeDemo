@@ -13,10 +13,10 @@ export default class Header extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Icon style={{ marginLeft: 15 }} name="angle-left" size={40} color="#900" />
+          <Icon style={{ marginLeft: 15 }} name="angle-left" size={40} color="#000000" />
           <Text style={styles.headerText}>230 E Court Dr SW</Text>
-          <Icon style={{ marginRight: 5 }}name="angle-up" size={40} color="#900" />
-          <Icon style={{ marginLeft: 5, marginRight: 10 }} name="angle-down" size={40} color="#900" />
+          <Icon style={{ marginRight: 5 }}name="angle-up" size={40} color="#999999" />
+          <Icon style={{ marginLeft: 5, marginRight: 10 }} name="angle-down" size={40} color="#999999" />
         </View>
       </View>
     );
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: 375,
-    height: 50
+    height: 50,
   },
   headerText: {
     flex: 1,

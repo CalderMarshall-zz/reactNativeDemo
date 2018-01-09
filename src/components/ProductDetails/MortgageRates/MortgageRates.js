@@ -13,25 +13,39 @@ export default class MortgageRates extends Component {
     return (
       <View style={styles.container}>
         <View style={{ padding: 10 }}>
-          <Text>Mortgage Rates</Text>
-          <Text>$2,308/month</Text>
-          <Text>$392,000 listing price</Text>
-          <Text>Principle And Interest</Text>
-          <Text>Property Tax</Text>
-          <Text>Other Expenses</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 20, marginBottom: 20 }}>Mortgage Rates</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 18 }}>
+            $2,308
+            <Text style={{ fontWeight: '300' }}>/month</Text>
+          </Text>
+          <Text style={{ fontSize: 13, color: '#797979', marginBottom: 20 }}>$392,000 listing price</Text>
+          {/* <Image source={require('')} /> */}
+          <Text style={styles.graphDetails}>Principle And Interest</Text>
+          {/* <Image source={require('')} /> */}
+          <Text style={styles.graphDetails}>Property Tax</Text>
+          {/* <Image source={require('')} /> */}
+          <Text style={styles.graphDetails}>Other Expenses</Text>
         </View>
-        <Image style={styles.graph} source={require('../../../assets/images/graph.jpg')} />
+        <View style={styles.graphContainer}>
+          <Image style={styles.graph} source={require('../../../assets/images/graph.jpg')} />
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  graphContainer: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   graph: {
     width: 250,
     height: 250
+  },
+  graphDetails: {
+    fontSize: 14,
+    marginBottom: 10
   }
 });
