@@ -101,6 +101,99 @@ export default class Home extends Component {
                                 <Text style={style.redOvalText}>Due Diligence</Text>
                                 <Text style={style.redOvalText}>02/28</Text>
                             </View>
+
+                            <Card style={style.propertyActivity}>
+                                <Text style={{color: 'white'}}>Property Activity</Text>
+                                <CardItem style={style.propertyActivityCardItem}>
+                                    <Left>
+                                        <Icon
+                                            name="ios-home"
+                                            type="ionicon"
+                                            style={style.makeWhite}
+                                        />
+                                        <Text style={style.activityText}>Open House</Text>
+                                    </Left>
+                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                        <Icon
+                                            name="ios-time"
+                                            type="ionicon"
+                                            style={style.timeIcon}
+                                        >
+                                        </Icon>
+                                        <Text style={style.activityText}>3d ago</Text>
+                                    </Right>
+
+
+
+                                </CardItem>
+
+                                <CardItem style={style.propertyActivityCardItem}>
+                                    <Left>
+                                        <Icon
+                                            name="ios-home"
+                                            type="ionicon"
+                                            style={style.makeWhite}
+                                        />
+                                        <Text style={style.activityText}>Floors Installed</Text>
+                                    </Left>
+
+                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                        <Icon
+                                            name="ios-time"
+                                            type="ionicon"
+                                            style={style.timeIcon}
+                                        >
+                                        </Icon>
+                                        <Text style={style.activityText}>3d ago</Text>
+                                    </Right>
+
+                                </CardItem>
+
+                                <CardItem style={style.propertyActivityCardItem}>
+                                    <Left>
+                                        <Icon
+                                            name="ios-home"
+                                            type="ionicon"
+                                            style={style.makeWhite}
+                                        />
+                                        <Text style={style.activityText}>New Windows Installed</Text>
+                                    </Left>
+
+                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                        <Icon
+                                            name="ios-time"
+                                            type="ionicon"
+                                            style={style.timeIcon}
+                                        >
+                                        </Icon>
+                                        <Text style={style.activityText}>1w ago</Text>
+                                    </Right>
+
+                                </CardItem>
+
+                                <CardItem style={style.propertyActivityCardItem}>
+                                    <Left>
+                                        <Icon
+                                            name="ios-home"
+                                            type="ionicon"
+                                            style={style.makeWhite}
+                                        />
+                                        <Text style={style.activityText}>New Roof</Text>
+                                    </Left>
+
+                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                        <Icon
+                                            name="ios-time"
+                                            type="ionicon"
+                                            style={style.timeIcon}
+                                        >
+                                        </Icon>
+                                        <Text style={style.activityText}>3w ago</Text>
+                                    </Right>
+
+                                </CardItem>
+
+                            </Card>
                         </ScrollView>
                     </View>
                 </View>
@@ -149,6 +242,19 @@ const style = {
     redOvalText: {
         color: 'white'
     },
+    activityText:{
+        color: 'white',
+        fontSize: 12,
+    },
+    makeWhite: {
+        color: 'white',
+        fontSize: 16
+    },
+    timeIcon: {
+        color: 'white',
+        fontSize: 16,
+        paddingHorizontal: 15
+    },
     ovalCard: {
         display: 'flex',
         flexDirection: 'column',
@@ -178,5 +284,24 @@ const style = {
         alignItems: 'center',
         paddingVertical: 5,
         marginVertical: 10
+    },
+    propertyActivity: {
+        backgroundColor: '#01224A',shadowOpacity: 0.75,
+        shadowRadius: 5,
+        shadowColor: 'black',
+        shadowOffset: { height: 0, width: 0 },
+        width: deviceWidth -20,
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 5,
+        marginVertical: 10
+    },
+    propertyActivityCardItem: {
+        marginVertical: 3,
+        width: deviceWidth -25,
+        flexDirection: 'row',
+        backgroundColor: '#01224A',
+        justifyContent: 'space-between'
     }
 };
