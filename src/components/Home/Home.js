@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image, View, TouchableOpacity, Platform, Dimensions, TextInput, ListView, FlatList, ScrollView, StatusBar } from 'react-native';
-import { Container, Header, Content, Text, Button, Card, Item, Left, Icon, Body, Right, Input, Spinner } from 'native-base';
+import { Container, Header, Content, Text, Button, Card, CardItem, Item, Left, Icon, Body, Right, Input, Spinner } from 'native-base';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import {Divider} from '@shoutem/ui';
 const deviceWidth = Dimensions.get('window').width;
@@ -23,7 +23,7 @@ export default class Home extends Component {
                     <Left>
                         <TouchableOpacity style={{height: 30, width: 30, marginTop: 40}} onPress={() => {Actions.home()}}>
                             <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515442358/corner_logo_yirut8.png'}}
+                                source={require('../../assests/images/corner_logo.png')}
                                 style={{height: 30, width: 30}}
                             />
                         </TouchableOpacity>
@@ -50,50 +50,51 @@ export default class Home extends Component {
                 <View style={style.outerViewContainer}>
                     <View style={style.innerViewContainer}>
                         <ScrollView contentContainerStyle={style.scrollViewContentContainer}>
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
-                            <Image
-                                source={{uri: 'http://res.cloudinary.com/mahmusiclee/image/upload/v1515444278/home_5_khtnrg.png'}}
-                                style={{width: 200, height: 80}}
-                            />
+                            <Card style={{backgroundColor: '#02214B',shadowOpacity: 0.75,
+                                shadowRadius: 5,
+                                shadowColor: 'black',
+                                shadowOffset: { height: 0, width: 0 },}}>
+                                <CardItem style={{backgroundColor: '#02214B', width: deviceWidth -20, justifyContent: 'center'}}>
+                                        <Text style={{color: 'white'}}>
+                                            transaction tracking
+                                        </Text>
+                                </CardItem>
+                                <View style={{flex: 1,
+                                    justifyContent: 'center', marginBottom: -30}}>
+                                    <Image resizeMode='contain' source={require('../../assests/images/oval_3.png')} style={{height: 140, width: null, flexGrow:1,
+                                        alignItems: 'center',
+                                        justifyContent:'center' }}/>
+
+                                    <View style={{bottom: 90, backgroundColor: 'transparent'}}>
+                                        <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>86%</Text>
+                                        <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>completed</Text>
+                                    </View>
+
+
+                                </View>
+                            </Card>
+                            <Card style={{display: 'flex', flexDirection: 'row',
+                                width: deviceWidth - 20,
+                                justifyContent: 'center', marginTop: -5,
+                                shadowOpacity: 0.75,
+                                shadowRadius: 5,
+                                shadowColor: 'black',
+                                shadowOffset: { height: 0, width: 0 },}} >
+                                <CardItem style={style.ovalCard}>
+                                    <Text style={style.ovalText}>tasks completed</Text>
+                                    <Text style={{fontSize: 16}}>20</Text>
+                                </CardItem>
+
+                                <CardItem style={style.ovalCard}>
+                                    <Text style={style.ovalText}>task at hand</Text>
+                                    <Text style={{fontSize: 12}}>Due Diligence</Text>
+                                </CardItem>
+
+                                <CardItem style={style.ovalCardLast}>
+                                    <Text style={style.ovalText}>tasks in progress</Text>
+                                    <Text style={{fontSize: 16}}>4</Text>
+                                </CardItem>
+                            </Card>
                         </ScrollView>
                     </View>
                 </View>
@@ -108,6 +109,7 @@ const style = {
     outerViewContainer: {
         height: deviceHeight,
         marginTop: 75,
+        width: deviceWidth,
         // backgroundColor: 'transparent',
         justifyContent: 'center',
 
@@ -118,16 +120,42 @@ const style = {
         alignItems: 'center',
         display: 'flex',
         flex: 1,
+        width: deviceWidth,
 
     },
     scrollView: {
         flexDirection: 'column',
         height: deviceHeight,
+        width: deviceWidth,
 
     },
     scrollViewContentContainer: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-around',
+        width: deviceWidth,
+        marginTop: 10
     },
+    ovalText: {
+        fontSize: 11,
+        paddingBottom: 10
+    },
+    ovalCard: {
+        display: 'flex',
+        flexDirection: 'column',
+        borderRightWidth: 1,
+        borderRightColor: 'gray',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center'
+    },
+    ovalCardLast: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center'
+    }
 };
