@@ -1,16 +1,43 @@
-import React, { Component } from 'react';
-import { Image, View, TouchableOpacity, Platform, Dimensions, TextInput, ListView, FlatList, ScrollView, StatusBar } from 'react-native';
-import { Container, Header, Content, Text, Button, Card, CardItem, Item, Left, Icon, Body, Right, Input, Spinner } from 'native-base';
-import { Actions, ActionConst } from 'react-native-router-flux';
+import React, {Component} from 'react';
+import {
+    Image,
+    View,
+    TouchableOpacity,
+    Platform,
+    Dimensions,
+    TextInput,
+    ListView,
+    FlatList,
+    ScrollView,
+    StatusBar
+} from 'react-native';
+import {
+    Container,
+    Header,
+    Content,
+    Text,
+    Button,
+    Card,
+    CardItem,
+    Item,
+    Left,
+    Icon,
+    Body,
+    Right,
+    Input,
+    Spinner
+} from 'native-base';
+import {Actions, ActionConst} from 'react-native-router-flux';
 import {Divider} from '@shoutem/ui';
+
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 
 export default class Home extends Component {
-    render () {
+    render() {
         return (
-            <Container style={{ backgroundColor: '#FFF', display: 'flex', flex: 1}}>
+            <Container style={{backgroundColor: '#FFF', display: 'flex', flex: 1}}>
                 <Header
                     style={{
                         backgroundColor: "white",
@@ -21,7 +48,9 @@ export default class Home extends Component {
                     }}
                 >
                     <Left>
-                        <TouchableOpacity style={{height: 30, width: 30, marginTop: 40}} onPress={() => {Actions.home()}}>
+                        <TouchableOpacity style={{height: 30, width: 30, marginTop: 40}} onPress={() => {
+                            Actions.home()
+                        }}>
                             <Image
                                 source={require('../../assests/images/corner_logo.png')}
                                 style={{height: 30, width: 30}}
@@ -30,12 +59,21 @@ export default class Home extends Component {
                     </Left>
                     <Body>
 
-                        <Text style={{fontSize: 20, color: "#00214B", marginTop: 110}}>My Place</Text>
-                        <Divider style={{width: 1000, borderWidth: 2, borderColor: '#02214B', marginLeft: -200}} styleName="line" />
+                    <Text style={{fontSize: 20, color: "#00214B", marginTop: 110}}>My Place</Text>
+                    <Divider style={{width: 1000, borderWidth: 2, borderColor: '#02214B', marginLeft: -200}}
+                             styleName="line"/>
 
-                        <Text style={{backgroundColor: '#F1F1F1', width: 200, paddingVertical: 5, marginVertical: 3, textAlign: 'center', fontSize: 10, color: '#AFAFAF'}}>SEARCH</Text>
-                        <Divider style={{width: 1000, borderWidth: 1, borderColor: '#02214B', marginLeft: -200}} styleName="line" />
-
+                    <Text style={{
+                        backgroundColor: '#F1F1F1',
+                        width: 200,
+                        paddingVertical: 5,
+                        marginVertical: 3,
+                        textAlign: 'center',
+                        fontSize: 10,
+                        color: '#AFAFAF'
+                    }}>SEARCH</Text>
+                    <Divider style={{width: 1000, borderWidth: 1, borderColor: '#02214B', marginLeft: -200}}
+                             styleName="line"/>
 
 
                     </Body>
@@ -43,43 +81,57 @@ export default class Home extends Component {
                         <Icon
                             name="ios-arrow-round-up"
                             color="grey"
-                            style={{ color: "grey", fontSize: 27 }}
+                            style={{color: "grey", fontSize: 27}}
                         />
                     </Right>
                 </Header>
                 <View style={style.outerViewContainer}>
                     <View style={style.innerViewContainer}>
                         <ScrollView contentContainerStyle={style.scrollViewContentContainer}>
-                            <Card style={{backgroundColor: '#02214B',shadowOpacity: 0.75,
+                            <Card style={{
+                                backgroundColor: '#02214B', shadowOpacity: 0.75,
                                 shadowRadius: 5,
                                 shadowColor: 'black',
-                                shadowOffset: { height: 0, width: 0 },}}>
-                                <CardItem style={{backgroundColor: '#02214B', width: deviceWidth -20, justifyContent: 'center'}}>
-                                        <Text style={{color: 'white'}}>
-                                            transaction tracking
-                                        </Text>
+                                shadowOffset: {height: 0, width: 0},
+                            }}>
+                                <CardItem style={{
+                                    backgroundColor: '#02214B',
+                                    width: deviceWidth - 20,
+                                    justifyContent: 'center'
+                                }}>
+                                    <Text style={{color: 'white'}}>
+                                        transaction tracking
+                                    </Text>
                                 </CardItem>
-                                <View style={{flex: 1,
-                                    justifyContent: 'center', marginBottom: -30}}>
-                                    <Image resizeMode='contain' source={require('../../assests/images/oval_3.png')} style={{height: 140, width: null, flexGrow:1,
-                                        alignItems: 'center',
-                                        justifyContent:'center' }}/>
+                                <View style={{
+                                    flex: 1,
+                                    justifyContent: 'center', marginBottom: -30
+                                }}>
+                                    <Image resizeMode='contain' source={require('../../assests/images/oval_3.png')}
+                                           style={{
+                                               height: 140, width: null, flexGrow: 1,
+                                               alignItems: 'center',
+                                               justifyContent: 'center'
+                                           }}/>
 
                                     <View style={{bottom: 90, backgroundColor: 'transparent'}}>
                                         <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>86%</Text>
-                                        <Text style={{color: 'white', textAlign: 'center', fontSize: 20}}>completed</Text>
+                                        <Text
+                                            style={{color: 'white', textAlign: 'center', fontSize: 20}}>completed</Text>
                                     </View>
 
 
                                 </View>
                             </Card>
-                            <Card style={{display: 'flex', flexDirection: 'row',
+                            <Card style={{
+                                display: 'flex', flexDirection: 'row',
                                 width: deviceWidth - 20,
                                 justifyContent: 'center', marginTop: -5,
                                 shadowOpacity: 0.75,
                                 shadowRadius: 5,
                                 shadowColor: 'black',
-                                shadowOffset: { height: 0, width: 0 },}} >
+                                shadowOffset: {height: 0, width: 0},
+                            }}>
                                 <CardItem style={style.ovalCard}>
                                     <Text style={style.ovalText}>tasks completed</Text>
                                     <Text style={{fontSize: 16}}>20</Text>
@@ -97,7 +149,8 @@ export default class Home extends Component {
                             </Card>
 
                             <View style={style.spinnerCard}>
-                                <Image resizeMode='contain' style={{height: 30, width: 30}} source={require('../../assests/images/Oval_5.png')}/>
+                                <Image resizeMode='contain' style={{height: 30, width: 30}}
+                                       source={require('../../assests/images/Oval_5.png')}/>
                                 <Text style={style.redOvalText}>Due Diligence</Text>
                                 <Text style={style.redOvalText}>02/28</Text>
                             </View>
@@ -113,7 +166,11 @@ export default class Home extends Component {
                                         />
                                         <Text style={style.activityText}>Open House</Text>
                                     </Left>
-                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                    <Right style={{
+                                        flexDirection: 'row',
+                                        justifyContent: 'flex-end',
+                                        alignItems: 'center'
+                                    }}>
                                         <Icon
                                             name="ios-time"
                                             type="ionicon"
@@ -122,7 +179,6 @@ export default class Home extends Component {
                                         </Icon>
                                         <Text style={style.activityText}>3d ago</Text>
                                     </Right>
-
 
 
                                 </CardItem>
@@ -137,7 +193,11 @@ export default class Home extends Component {
                                         <Text style={style.activityText}>Floors Installed</Text>
                                     </Left>
 
-                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                    <Right style={{
+                                        flexDirection: 'row',
+                                        justifyContent: 'flex-end',
+                                        alignItems: 'center'
+                                    }}>
                                         <Icon
                                             name="ios-time"
                                             type="ionicon"
@@ -159,7 +219,11 @@ export default class Home extends Component {
                                         <Text style={style.activityText}>New Windows Installed</Text>
                                     </Left>
 
-                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                    <Right style={{
+                                        flexDirection: 'row',
+                                        justifyContent: 'flex-end',
+                                        alignItems: 'center'
+                                    }}>
                                         <Icon
                                             name="ios-time"
                                             type="ionicon"
@@ -181,7 +245,11 @@ export default class Home extends Component {
                                         <Text style={style.activityText}>New Roof</Text>
                                     </Left>
 
-                                    <Right style={{flexDirection: 'row' ,justifyContent: 'flex-end', alignItems: 'center'}}>
+                                    <Right style={{
+                                        flexDirection: 'row',
+                                        justifyContent: 'flex-end',
+                                        alignItems: 'center'
+                                    }}>
                                         <Icon
                                             name="ios-time"
                                             type="ionicon"
@@ -242,7 +310,7 @@ const style = {
     redOvalText: {
         color: 'white'
     },
-    activityText:{
+    activityText: {
         color: 'white',
         fontSize: 12,
     },
@@ -274,11 +342,11 @@ const style = {
         alignSelf: 'center'
     },
     spinnerCard: {
-        backgroundColor: '#01224A',shadowOpacity: 0.75,
+        backgroundColor: '#01224A', shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'black',
-        shadowOffset: { height: 0, width: 0 },
-        width: deviceWidth -20,
+        shadowOffset: {height: 0, width: 0},
+        width: deviceWidth - 20,
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
@@ -286,11 +354,11 @@ const style = {
         marginVertical: 10
     },
     propertyActivity: {
-        backgroundColor: '#01224A',shadowOpacity: 0.75,
+        backgroundColor: '#01224A', shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'black',
-        shadowOffset: { height: 0, width: 0 },
-        width: deviceWidth -20,
+        shadowOffset: {height: 0, width: 0},
+        width: deviceWidth - 20,
         flexDirection: 'column',
         justifyContent: 'space-around',
         alignItems: 'center',
@@ -299,7 +367,7 @@ const style = {
     },
     propertyActivityCardItem: {
         marginVertical: 3,
-        width: deviceWidth -25,
+        width: deviceWidth - 25,
         flexDirection: 'row',
         backgroundColor: '#01224A',
         justifyContent: 'space-between'
