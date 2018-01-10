@@ -95,6 +95,12 @@ export default class Home extends Component {
                                     <Text style={{fontSize: 16}}>4</Text>
                                 </CardItem>
                             </Card>
+
+                            <View style={style.spinnerCard}>
+                                <Image resizeMode='contain' style={{height: 30, width: 30}} source={require('../../assests/images/Oval_5.png')}/>
+                                <Text style={style.redOvalText}>Due Diligence</Text>
+                                <Text style={style.redOvalText}>02/28</Text>
+                            </View>
                         </ScrollView>
                     </View>
                 </View>
@@ -140,6 +146,9 @@ const style = {
         fontSize: 11,
         paddingBottom: 10
     },
+    redOvalText: {
+        color: 'white'
+    },
     ovalCard: {
         display: 'flex',
         flexDirection: 'column',
@@ -157,5 +166,17 @@ const style = {
         alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'center'
+    },
+    spinnerCard: {
+        backgroundColor: '#01224A',shadowOpacity: 0.75,
+        shadowRadius: 5,
+        shadowColor: 'black',
+        shadowOffset: { height: 0, width: 0 },
+        width: deviceWidth -20,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 5,
+        marginVertical: 10
     }
 };
