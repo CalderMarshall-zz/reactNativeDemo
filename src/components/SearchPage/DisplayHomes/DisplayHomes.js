@@ -29,20 +29,32 @@ export default class DisplayHomes extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.innerContainer}>
-          {homes.map((home, index) => (
+          {/* {homes.map((home, index) => (
             <View key={index}>
               <View style={styles.homeTextContainer}>
                 <Text style={styles.homeText}>{home.quote}</Text>
                 <Text style={styles.homeText}>{home.address}</Text>
                 <Text style={styles.homeText}>{home.desc}</Text>
-              </View>
+              </View> */}
               {/* TODO: add linear gradient --> react-native-linear-gradient  */}
-              <Image
+              {/* <Image
                 style={styles.homeImg}
                 source={require('../../../assets/images/east-court-house.jpg')}
               />
             </View>
-          ))}
+          ))} */}
+          <Image
+            style={styles.homeImg}
+            source={require('../../../assets/images/east-court-house.jpg')}
+          />
+          <Image
+            style={styles.homeImg}
+            source={require('../../../assets/images/east-court-house.jpg')}
+          />
+          <Image
+            style={styles.homeImg}
+            source={require('../../../assets/images/east-court-house.jpg')}
+          />
         </View>
       </View>
     );
