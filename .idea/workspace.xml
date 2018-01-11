@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fffa7f-b52c-4ccc-9660-9d749ad94f5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/CREAM.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/card_Com.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/clock.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/community_card.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/logo_Small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/oval_Small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/silly_room.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/table.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assests/images/Oval_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assests/images/corner_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assests/images/oval_3.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assests/images/one place logo.png" afterPath="$PROJECT_DIR$/src/assests/images/one place logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/instagram_card.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/laptops.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/phone_hand.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/twitter_card.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assests/images/youtube_card.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Community/Community.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Router.js" afterPath="$PROJECT_DIR$/src/Router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Home/Home.js" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,12 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="94" column="68" lean-forward="true" selection-start-line="94" selection-start-column="68" selection-end-line="94" selection-end-column="68" />
-              <folding />
+            <state relative-caret-position="-2270">
+              <caret line="157" column="28" lean-forward="false" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Community.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Community/Community.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="97" column="66" lean-forward="false" selection-start-line="97" selection-start-column="66" selection-end-line="97" selection-end-column="66" />
+              <caret line="110" column="66" lean-forward="false" selection-start-line="110" selection-start-column="66" selection-end-line="110" selection-end-column="66" />
+              <caret line="123" column="66" lean-forward="false" selection-start-line="123" selection-start-column="66" selection-end-line="123" selection-end-column="66" />
+              <caret line="136" column="66" lean-forward="false" selection-start-line="136" selection-start-column="66" selection-end-line="136" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="155" column="18" lean-forward="true" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,6 +69,9 @@
     <findStrings>
       <find>icon</find>
       <find>transaction</find>
+      <find>width</find>
+      <find>padding</find>
+      <find>12</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -55,8 +82,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/components/Login/Login.js" />
         <option value="$PROJECT_DIR$/App.js" />
-        <option value="$PROJECT_DIR$/src/Router.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Home.js" />
+        <option value="$PROJECT_DIR$/src/Router.js" />
+        <option value="$PROJECT_DIR$/src/components/Community/Community.js" />
       </list>
     </option>
   </component>
@@ -79,10 +107,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
-    <option name="y" value="23" />
-    <option name="width" value="1654" />
-    <option name="height" value="834" />
+    <option name="x" value="21" />
+    <option name="y" value="32" />
+    <option name="width" value="1588" />
+    <option name="height" value="941" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -134,6 +162,13 @@
               <item name="one-place-mah" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="one-place-mah" type="b2602c69:ProjectViewProjectNode" />
+              <item name="one-place-mah" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Community" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="one-place-mah" type="b2602c69:ProjectViewProjectNode" />
@@ -194,18 +229,18 @@
       <workItem from="1515591699425" duration="8402000" />
       <workItem from="1515612939835" duration="997000" />
       <workItem from="1515688907042" duration="25000" />
-      <workItem from="1515688976226" duration="6210000" />
+      <workItem from="1515688976226" duration="11936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31118000" />
+    <option name="totallyTimeSpent" value="36844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="23" width="1654" height="834" extended-state="0" />
+    <frame x="21" y="32" width="1588" height="941" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14631197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15239295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -418,7 +453,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assests/images/corner_logo.png" />
-    <entry file="file://$PROJECT_DIR$/src/Router.js" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -461,9 +495,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="94" column="68" lean-forward="true" selection-start-line="94" selection-start-column="68" selection-end-line="94" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="-2270">
+          <caret line="157" column="28" lean-forward="false" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="155" column="18" lean-forward="true" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Community/Community.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="97" column="66" lean-forward="false" selection-start-line="97" selection-start-column="66" selection-end-line="97" selection-end-column="66" />
+          <caret line="110" column="66" lean-forward="false" selection-start-line="110" selection-start-column="66" selection-end-line="110" selection-end-column="66" />
+          <caret line="123" column="66" lean-forward="false" selection-start-line="123" selection-start-column="66" selection-end-line="123" selection-end-column="66" />
+          <caret line="136" column="66" lean-forward="false" selection-start-line="136" selection-start-column="66" selection-end-line="136" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

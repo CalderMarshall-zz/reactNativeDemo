@@ -3,6 +3,7 @@ import { Scene, Router, Actions, Reducer, Stack} from "react-native-router-flux"
 import { Text, View, Image, StyleSheet, StatusBar } from "react-native";
 import { Icon } from "native-base";
 import Home from './components/Home/Home'
+import Community from './components/Community/Community'
 
 SearchIcon = () => {
         return (
@@ -76,7 +77,7 @@ const RouterComponent = () => {
             <Stack key="root"  hideNavBar showLabel={false} style={style.tabBarStyle}>
                 <Scene tabs style={style.tabBarStyle} key="main" >
                     <Scene
-                        key="home"
+                        key="search"
                         hideNavBar
                         component={Home}
                         icon={this.SearchIcon}
@@ -89,18 +90,19 @@ const RouterComponent = () => {
 
                     />
                     <Scene
-                        key="browse"
+                        key="university"
                         icon={this.UniversityIcon}
                         hideNavBar
                         component={Home}
 
                     />
                     <Scene
-                        key="university"
+                        key="community"
                         hideNavBar
                         icon={this.CommunityIcon}
                         sceneStyle={{ backgroundColor: "#EEE" }}
-                        component={Home}
+                        component={Community}
+                        initial
 
                     />
                     <Scene
@@ -154,6 +156,8 @@ const style = StyleSheet.create({
     tabBarStyle: {
         height: 65,
         backgroundColor: "white",
+        borderTopWidth: 1,
+        borderTopColor: '#02214B'
     },
     icons: {
         color: "black"

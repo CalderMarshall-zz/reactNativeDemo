@@ -309,7 +309,7 @@ export default class Home extends Component {
                                     <CardItem style={style.borderBottomCardItem}>
                                         <Left style={{marginRight: -100}}>
                                             <Image style={style.uniImg}
-                                                   source={require('../../assests/images/CREAM.jpg')}/>
+                                                   source={require('../../assests/images/laptops.png')}/>
                                         </Left>
                                         <Body>
                                             <Text style={{fontSize: 9}}>
