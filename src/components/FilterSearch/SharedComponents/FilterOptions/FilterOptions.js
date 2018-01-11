@@ -6,11 +6,31 @@ import {
   StyleSheet,
 } from 'react-native';
 
+const Option = (props) => {
+  return (
+    <Text
+    onPress={props.onPress}
+    style={[styles.option, props.any && styles.optionActive]}
+    >
+      {props.children}
+    </Text>
+  )
+}
+
 export default class FilterOptions extends Component {
+  state = {
+    any: true
+  }
+
   render() {
     return (
       <View style={{ flexDirection: 'row', justifyContent: 'center', width: 330 }}>
-        <Text style={[styles.optionActive, styles.option]}>Any</Text>
+        <Text
+          onPress={() => this.setState({ any: !this.state.any })}
+          style={[styles.option, this.state.any && styles.optionActive]}
+        >
+          Any
+        </Text>
         <Text style={styles.option}>1+</Text>
         <Text style={styles.option}>2+</Text>
         <Text style={styles.option}>3+</Text>
