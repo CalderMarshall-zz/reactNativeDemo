@@ -6,6 +6,7 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 const homes = [{
   address: '230 E Court Dr SW, Atlanta, GA 30331',
@@ -24,6 +25,7 @@ const homes = [{
   desc: '3bd 2+ ba 1,584 sq ft'
 }]
 
+// TODO: Loop over these images
 export default class DisplayHomes extends Component {
   render() {
     return (
@@ -43,17 +45,19 @@ export default class DisplayHomes extends Component {
               />
             </View>
           ))} */}
+          <View>
+            <Image
+              style={styles.homeImg}
+              source={require('../../../assets/images/east-court-house.png')}
+            />
+          </View>
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.png')}
+            source={require('../../../assets/images/home-images-5.png')}
           />
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.png')}
-          />
-          <Image
-            style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.png')}
+            source={require('../../../assets/images/home-images-6.png')}
           />
         </View>
       </ScrollView>

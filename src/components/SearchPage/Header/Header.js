@@ -7,6 +7,7 @@ import {
   Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
 
 import SearchForm from './SearchForm/SearchForm';
 
@@ -17,7 +18,7 @@ export default class Header extends Component {
         <SearchForm />
         <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 104, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={20} color="#02214B" />
         <View style={styles.formBottom}>
-          <Text style={{ marginLeft: 8, flex: 1 }}>5 Results</Text>
+          <Text onPress={() => Actions.productDetails()} style={{ marginLeft: 8, flex: 1 }}>5 Results</Text>
           {/* TODO: Fix that borderLeftWidth & borderLeftColor */}
           {/* <Image
             style={{ marginRight: 8 }}
