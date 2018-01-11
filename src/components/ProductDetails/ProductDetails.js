@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     paddingBottom: 40
   },
   img: {
-    width: 375,
+    width: '100%',
     height: 300,
     borderWidth: 0.2,
     borderColor: '#032F5C'

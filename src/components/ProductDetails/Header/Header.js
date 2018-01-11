@@ -27,14 +27,11 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: 375,
-    height: 50,
+    height: 50
   },
   headerText: {
     flex: 1,
-    width: 30,
-    marginLeft: 60,
-    marginRight: 10,
+    textAlign: 'center',
     fontSize: 20,
     fontWeight: '800',
     letterSpacing: 0.5
