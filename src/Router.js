@@ -15,6 +15,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import HomeImages from './components/HomeImages/HomeImages';
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/Signup";
+import Community from './components/Community/Community'
 
 SearchIcon = () => {
   return (
@@ -58,89 +59,102 @@ ProfileIcon = () => {
 };
 
 const RouterComponent = () => {
-  return (
-    <Router>
-      <Stack key="root" hideNavBar showLabel={false} style={style.tabBarStyle}>
-        <Scene tabs style={style.tabBarStyle}>
-          <Scene
-            key="home"
-            hideNavBar
-            component={Home}
-            icon={this.SearchIcon}
-          />
-          <Scene
-            key="myPlace"
-            hideNavBar
-            icon={this.MyPlaceIcon}
-            component={Home}
-          />
-          <Scene
-            key="browse"
-            icon={this.UniversityIcon}
-            hideNavBar
-            component={Home}
-          />
-          <Scene
-            key="university"
-            hideNavBar
-            icon={this.CommunityIcon}
-            sceneStyle={{ backgroundColor: "#EEE" }}
-            component={Home}
-          />
-          <Scene
-            key="profile"
-            hideNavBar
-            icon={this.ProfileIcon}
-            component={Home}
-          />
-        </Scene>
-        <Scene
-          key="login"
-          hideTabBar
-          hideNavBar
-          sceneStyle={{ display: "none" }}
-          component={Login}
-          initial
-        />
-        <Scene
-          key="signup"
-          hideTabBar
-          hideNavBar
-          sceneStyle={{ display: "none" }}
-          component={Signup}
-        />
+    return (
+        <Router>
+            <Stack key="root"  hideNavBar showLabel={false} style={style.tabBarStyle}>
+                <Scene tabs style={style.tabBarStyle} key="main" >
+                    <Scene
+                        key="search"
+                        hideNavBar
+                        component={Home}
+                        icon={this.SearchIcon}
+                    />
+                    <Scene
+                        key="myPlace"
+                        hideNavBar
+                        icon={this.MyPlaceIcon}
+                        component={Home}
 
-        {/*<Scene*/}
-        {/*key="settings"*/}
-        {/*component={SettingsPage}*/}
-        {/*hideNavBar*/}
-        {/*hideTabBar*/}
-        {/*/>*/}
+                    />
+                    <Scene
+                        key="university"
+                        icon={this.UniversityIcon}
+                        hideNavBar
+                        component={Home}
 
-        {/*<Scene*/}
-        {/*key="needhelp"*/}
-        {/*component={NeedHelp}*/}
-        {/*hideTabBar*/}
-        {/*hideNavBar*/}
-        {/*sceneStyle={{ display: "none" }}*/}
-        {/*/>*/}
-        {/*<Scene*/}
-        {/*key="walkthrough"*/}
-        {/*component={Walkthrough}*/}
-        {/*hideTabBar*/}
-        {/*hideNavBar*/}
-        {/*/>*/}
-      </Stack>
-    </Router>
-  );
+                    />
+                    <Scene
+                        key="community"
+                        hideNavBar
+                        icon={this.CommunityIcon}
+                        sceneStyle={{ backgroundColor: "#EEE" }}
+                        component={Community}
+                    />
+                    <Scene
+                        key="profile"
+                        hideNavBar
+                        icon={this.ProfileIcon}
+                        component={Home}
+
+                    />
+
+
+                </Scene>
+                <Scene
+                  key="login"
+                  hideTabBar
+                  hideNavBar
+                  sceneStyle={{ display: "none" }}
+                  component={Login}
+                  initial
+                />
+                <Scene
+                  key="signup"
+                  hideTabBar
+                  hideNavBar
+                  sceneStyle={{ display: "none" }}
+                  component={Signup}
+                />
+
+
+
+
+
+                {/*<Scene*/}
+                    {/*key="settings"*/}
+                    {/*component={SettingsPage}*/}
+                    {/*hideNavBar*/}
+                    {/*hideTabBar*/}
+                {/*/>*/}
+
+
+                {/*<Scene*/}
+                    {/*key="needhelp"*/}
+                    {/*component={NeedHelp}*/}
+                    {/*hideTabBar*/}
+                    {/*hideNavBar*/}
+                    {/*sceneStyle={{ display: "none" }}*/}
+                {/*/>*/}
+                {/*<Scene*/}
+                    {/*key="walkthrough"*/}
+                    {/*component={Walkthrough}*/}
+                    {/*hideTabBar*/}
+                    {/*hideNavBar*/}
+                {/*/>*/}
+
+            </Stack>
+        </Router>
+    );
 };
 const style = StyleSheet.create({
-  tabBarStyle: {
-    height: 65,
-    backgroundColor: "white"
-  },
-  icons: {
-    color: "black"
-  }
+    tabBarStyle: {
+        height: 65,
+        backgroundColor: "white",
+        borderTopWidth: 1,
+        borderTopColor: '#02214B'
+    },
+    icons: {
+        color: "black"
+    }
 });
 export default RouterComponent;

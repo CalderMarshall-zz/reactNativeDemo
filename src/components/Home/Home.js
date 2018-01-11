@@ -52,7 +52,7 @@ export default class Home extends Component {
                             Actions.home()
                         }}>
                             <Image
-                                source={require('../../assests/images/corner_logo.png')}
+                                source={require('../../assests/images/logo_Small.png')}
                                 style={{height: 30, width: 30}}
                             />
                         </TouchableOpacity>
@@ -107,7 +107,7 @@ export default class Home extends Component {
                                     flex: 1,
                                     justifyContent: 'center', marginBottom: -30
                                 }}>
-                                    <Image resizeMode='contain' source={require('../../assests/images/oval_3.png')}
+                                    <Image resizeMode='contain' source={require('../../assests/images/oval_Large.png')}
                                            style={{
                                                height: 140, width: null, flexGrow: 1,
                                                alignItems: 'center',
@@ -150,7 +150,7 @@ export default class Home extends Component {
 
                             <View style={style.spinnerCard}>
                                 <Image resizeMode='contain' style={{height: 30, width: 30}}
-                                       source={require('../../assests/images/Oval_5.png')}/>
+                                       source={require('../../assests/images/oval_Small.png')}/>
                                 <Text style={style.redOvalText}>Due Diligence</Text>
                                 <Text style={style.redOvalText}>02/28</Text>
                             </View>
@@ -262,6 +262,88 @@ export default class Home extends Component {
                                 </CardItem>
 
                             </Card>
+
+                            <Card>
+                                <CardItem style={style.onePlaceUniversityCard}>
+                                    <Text style={{color: 'white'}}>
+                                        One Place University
+                                    </Text>
+                                </CardItem>
+
+                                    <CardItem style={style.borderBottomCardItem}>
+                                        <Left style={{marginRight: -100}}>
+                                            <Image style={style.uniImg}
+                                                   source={require('../../assests/images/table.jpg')}/>
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontSize: 9}}>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus
+                                                qui blanditiis praesentium voluptatum
+                                            </Text>
+                                        </Body>
+                                    </CardItem>
+                                    <CardItem style={style.borderBottomCardItem}>
+                                        <Left style={{marginRight: -100}}>
+                                            <Image style={style.uniImg}
+                                                   source={require('../../assests/images/clock.jpg')}/>
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontSize: 9}}>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus
+                                                qui blanditiis praesentium voluptatum
+                                            </Text>
+                                        </Body>
+                                    </CardItem>
+                                    <CardItem style={style.borderBottomCardItem}>
+                                        <Left style={{marginRight: -100}}>
+                                            <Image style={style.uniImg}
+                                                   source={require('../../assests/images/silly_room.jpg')}/>
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontSize: 9}}>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus
+                                                qui blanditiis praesentium voluptatum
+                                            </Text>
+                                        </Body>
+                                    </CardItem>
+                                    <CardItem style={style.borderBottomCardItem}>
+                                        <Left style={{marginRight: -100}}>
+                                            <Image style={style.uniImg}
+                                                   source={require('../../assests/images/laptops.png')}/>
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontSize: 9}}>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus
+                                                qui blanditiis praesentium voluptatum
+                                            </Text>
+                                        </Body>
+                                    </CardItem>
+                                    <CardItem>
+                                        <Left style={{marginRight: -100}}>
+                                            <Image style={style.uniImg}
+                                                   source={require('../../assests/images/CREAM.jpg')}/>
+                                        </Left>
+                                        <Body>
+                                            <Text style={{fontSize: 9}}>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus
+                                                qui blanditiis praesentium voluptatum
+                                            </Text>
+                                        </Body>
+                                    </CardItem>
+                            </Card>
+
+                            <Card style={{backgroundColor: '#01224A', width: deviceWidth - 20, borderColor: 'transparent',shadowOpacity: 0.75,
+                                shadowRadius: 5,
+                                marginTop: 20,
+                                shadowColor: 'black',
+                                shadowOffset: {height: 0, width: 0},}}>
+                                <Image
+                                    style={{ width: '100%', paddingRight: 0, height: 118}}
+                                    source={require('../../assests/images/card_Com.jpg')}
+                                    resizeMode='cover'
+                                >
+                                </Image>
+                            </Card>
                         </ScrollView>
                     </View>
                 </View>
@@ -279,8 +361,6 @@ const style = {
         width: deviceWidth,
         // backgroundColor: 'transparent',
         justifyContent: 'center',
-
-
     },
     innerViewContainer: {
         flexDirection: 'column',
@@ -288,20 +368,18 @@ const style = {
         display: 'flex',
         flex: 1,
         width: deviceWidth,
-
     },
     scrollView: {
         flexDirection: 'column',
         height: deviceHeight,
         width: deviceWidth,
-
     },
     scrollViewContentContainer: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-around',
         width: deviceWidth,
-        marginTop: 10
+        marginTop: 10,
     },
     ovalText: {
         fontSize: 11,
@@ -371,5 +449,25 @@ const style = {
         flexDirection: 'row',
         backgroundColor: '#01224A',
         justifyContent: 'space-between'
+    },
+    onePlaceUniversityCard: {
+        backgroundColor: '#01224A', shadowOpacity: 0.75,
+        shadowRadius: 5,
+        shadowColor: 'black',
+        shadowOffset: {height: 0, width: 0},
+        width: deviceWidth - 20,
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+    },
+    uniImg: {
+        height: 52,
+        width: 100,
+        marginLeft: -15,
+        marginTop: -10,
+        marginBottom: -10
+    },
+    borderBottomCardItem: {
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1,
     }
 };
