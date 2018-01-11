@@ -9,6 +9,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
 
 import FilterSearchBottom from './FilterSearchBottom/FilterSearchBottom';
 import KeywordSearch from './KeywordSearch/KeywordSearch';
@@ -21,9 +22,9 @@ export default class FilterSearch extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 18, marginLeft: 20 }}>Cancel</Text>
+          <Text style={{ fontSize: 18, marginLeft: 20 }} onPress={() => Actions.pop()}>Cancel</Text>
           <Text style={{ paddingLeft: 50, paddingRight: 50, fontSize: 25 }}>Filter Search</Text>
-          <Text style={{ fontSize: 18, marginRight: 20 }}>Apply</Text>
+          <Text style={{ fontSize: 18, marginRight: 20 }} onPress={() => Actions.home()}>Apply</Text>
         </View>
         <View style={{
           backgroundColor: '#efefef',
@@ -49,7 +50,9 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingBottom: 20,
+    paddingBottom: 10,
+    paddingTop: 50,
+    backgroundColor: '#FFF',
     borderBottomColor: '#032A5E',
     borderBottomWidth: 1
   }
