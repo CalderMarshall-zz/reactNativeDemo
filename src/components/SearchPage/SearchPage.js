@@ -19,7 +19,7 @@ export default class SearchPage extends Component {
           <Header />
           <DisplayHomes />
         </ScrollView>
-        <Navigation />
+        {/* <Navigation /> */}
       </View>
     );
   }

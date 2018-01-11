@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 export default class SearchForm extends Component {
   state = { search: '' }
@@ -26,7 +27,7 @@ export default class SearchForm extends Component {
             placeholder='Address, City, Zip'
             placeholderTextColor='#787878'
           />
-          <Text style={styles.text}>Filter</Text>
+          <Text onPress={() => Actions.filterSearch()} style={styles.text}>Filter</Text>
         </View>
       </View>
     );
