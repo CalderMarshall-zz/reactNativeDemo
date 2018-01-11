@@ -14,6 +14,7 @@ import FilterSearch from './components/FilterSearch/FilterSearch';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import HomeImages from './components/HomeImages/HomeImages';
 import Login from "./components/Login/Login";
+import Signup from "./components/Login/Signup";
 
 SearchIcon = () => {
   return (
@@ -100,6 +101,13 @@ const RouterComponent = () => {
           sceneStyle={{ display: "none" }}
           component={Login}
           initial
+        />
+        <Scene
+          key="signup"
+          hideTabBar
+          hideNavBar
+          sceneStyle={{ display: "none" }}
+          component={Signup}
         />
 
         {/*<Scene*/}
