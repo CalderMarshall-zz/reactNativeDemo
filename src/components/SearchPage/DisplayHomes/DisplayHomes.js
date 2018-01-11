@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Image,
+  TouchableOpacity,
   ScrollView,
   StyleSheet,
 } from 'react-native';
@@ -45,12 +46,12 @@ export default class DisplayHomes extends Component {
               />
             </View>
           ))} */}
-          <View>
+          <TouchableOpacity onPress={() => Actions.productDetails()}>
             <Image
               style={styles.homeImg}
               source={require('../../../assets/images/east-court-house.png')}
             />
-          </View>
+          </TouchableOpacity>
           <Image
             style={styles.homeImg}
             source={require('../../../assets/images/home-images-5.png')}

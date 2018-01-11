@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  TouchableOpacity,
   StyleSheet,
   ScrollView,
   Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
 
 import Header from './Header/Header';
 import HomeInfo from './HomeInfo/HomeInfo';
@@ -37,10 +39,12 @@ export default class ProductDetails extends Component {
         /> */}
         <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={25} color="#000000" />
         <Icon onPress={this.handleHeartFill} style={{ marginLeft: 15, position: 'absolute', right: 45, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name={this.state.fill ? "heart" : "heart-o"} size={25} color="#000000" />
-        <Image
-          style={styles.img}
-          source={require('../../assets/images/east-court-house.png')}
-        />
+        <TouchableOpacity onPress={() => Actions.homeImages()}>
+          <Image
+            style={styles.img}
+            source={require('../../assets/images/east-court-house.png')}
+          />
+        </TouchableOpacity>
         <HomeInfo />
         <HomeDesc />
         <View style={{ padding: 10, marginTop: 10 }}>
