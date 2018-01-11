@@ -1,8 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import * as firebase from 'firebase';
 
-import Router from './src/Router'
-import Home from './src/components/Home/Home'
+import Router from './src/Router';
+
+var config = {
+  apiKey: "AIzaSyB5CYcJfw_B0FTDi1ZNERHd6eCoSzootS8",
+  authDomain: "oneplace-7455a.firebaseapp.com",
+  databaseURL: "https://oneplace-7455a.firebaseio.com",
+  projectId: "oneplace-7455a",
+  storageBucket: "oneplace-7455a.appspot.com",
+  messagingSenderId: "64716409146"
+};
+firebase.initializeApp(config);
+
 export default class App extends React.Component {
   render() {
     return (
