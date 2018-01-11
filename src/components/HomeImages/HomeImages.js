@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     paddingTop: 40
   },
   homeImg: {
-    width: 375,
+    width: '100%',
     marginTop: 4,
     marginBottom: 4,
     height: 360
