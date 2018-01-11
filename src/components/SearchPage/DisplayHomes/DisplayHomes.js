@@ -40,11 +40,11 @@ export default class DisplayHomes extends Component {
           </TouchableOpacity>
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/home-images-5.png')}
+            source={require('../../../assets/images/Home-images-5.png')}
           />
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/home-images-6.png')}
+            source={require('../../../assets/images/Home-images-6.png')}
           />
         </View>
       </ScrollView>
