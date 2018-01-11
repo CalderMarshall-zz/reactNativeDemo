@@ -49,7 +49,7 @@ export default class Community extends Component {
                 >
                     <Left>
                         <TouchableOpacity style={{height: 30, width: 30}} onPress={() => {
-                            Actions.home()
+                            Actions.myPlace()
                         }}>
                             <Image
                                 source={require('../../assests/images/logo_Small.png')}

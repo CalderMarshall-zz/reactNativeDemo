@@ -102,8 +102,6 @@ const RouterComponent = () => {
                         icon={this.CommunityIcon}
                         sceneStyle={{ backgroundColor: "#EEE" }}
                         component={Community}
-                        initial
-
                     />
                     <Scene
                         key="profile"
