@@ -24,7 +24,7 @@ export default class FilterOptions extends Component {
 
   render() {
     return (
-      <View style={{ flexDirection: 'row', justifyContent: 'center', width: 330 }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'flex-start', flex: 1 }}>
         <Text
           onPress={() => this.setState({ any: !this.state.any })}
           style={[styles.option, this.state.any && styles.optionActive]}
@@ -47,11 +47,13 @@ const styles = StyleSheet.create({
     color: '#FFFFFF'
   },
   option: {
-    paddingTop: 15,
-    paddingLeft: 20,
-    paddingBottom: 15,
-    paddingRight: 20,
+    paddingTop: 10,
+    paddingLeft: 15,
+    paddingBottom: 10,
+    paddingRight: 15,
     borderColor: '#454545',
-    borderWidth: 0.8
+    borderLeftWidth: 0.8,
+    borderTopWidth: 0.8,
+    borderBottomWidth: 0.8
   }
 });

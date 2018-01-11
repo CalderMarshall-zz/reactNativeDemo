@@ -22,13 +22,12 @@ export default class FilterSearch extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 18, marginLeft: 20 }} onPress={() => Actions.pop()}>Cancel</Text>
-          <Text style={{ paddingLeft: 50, paddingRight: 50, fontSize: 25 }}>Filter Search</Text>
-          <Text style={{ fontSize: 18, marginRight: 20 }} onPress={() => Actions.home()}>Apply</Text>
+          <Text style={{ fontSize: 18, paddingLeft: 8 }} onPress={() => Actions.pop()}>Cancel</Text>
+          <Text style={{ flex: 2, fontSize: 25, textAlign: 'center' }}>Filter Search</Text>
+          <Text style={{ fontSize: 18, paddingRight: 8 }} onPress={() => Actions.home()}>Apply</Text>
         </View>
         <View style={{
           backgroundColor: '#efefef',
-          width: 375,
           padding: 20
         }}>
           <KeywordSearch />
@@ -45,11 +44,12 @@ export default class FilterSearch extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%'
+    width: '100%',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     paddingBottom: 10,
     paddingTop: 50,
     backgroundColor: '#FFF',

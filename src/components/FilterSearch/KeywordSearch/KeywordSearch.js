@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   form: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: 340,
     height: 60,
   },
   input: {
