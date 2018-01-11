@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import SearchPage from './components/SearchPage/SearchPage';
 import FilterSearch from './components/FilterSearch/FilterSearch';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import HomeImages from './components/HomeImages/HomeImages';
 
 SearchIcon = () => {
         return (
@@ -158,6 +159,12 @@ const RouterComponent = () => {
                   key="productDetails"
                   hideNavBar
                   component={ProductDetails}
+                  sceneStyle={{ display: "none" }}
+                />
+                <Scene
+                  key="homeImages"
+                  hideNavBar
+                  component={HomeImages}
                   sceneStyle={{ display: "none" }}
                 />
 
