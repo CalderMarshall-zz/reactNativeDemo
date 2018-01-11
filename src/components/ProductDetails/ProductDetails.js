@@ -28,15 +28,6 @@ export default class ProductDetails extends Component {
       <View style={styles.container}>
       <Header />
       <ScrollView>
-        
-        {/* <Image
-          style={{ postion: 'absolute', top: 10 }}
-          source={require('../../assets/images/transparent-heart-icon.png')}
-        />
-        <Image
-          style={{ postion: 'absolute', top: 10 }}
-          source={require('../../assets/images/transparent-share-icon.png')}
-        /> */}
         <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={25} color="#000000" />
         <Icon onPress={this.handleHeartFill} style={{ marginLeft: 15, position: 'absolute', right: 45, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name={this.state.fill ? "heart" : "heart-o"} size={25} color="#000000" />
         <TouchableOpacity onPress={() => Actions.homeImages()}>

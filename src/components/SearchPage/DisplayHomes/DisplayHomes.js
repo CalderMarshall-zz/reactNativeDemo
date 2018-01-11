@@ -32,20 +32,6 @@ export default class DisplayHomes extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.innerContainer}>
-          {/* {homes.map((home, index) => (
-            <View key={index}>
-              <View style={styles.homeTextContainer}>
-                <Text style={styles.homeText}>{home.quote}</Text>
-                <Text style={styles.homeText}>{home.address}</Text>
-                <Text style={styles.homeText}>{home.desc}</Text>
-              </View> */}
-              {/* TODO: add linear gradient --> react-native-linear-gradient  */}
-              {/* <Image
-                style={styles.homeImg}
-                source={require('../../../assets/images/east-court-house.jpg')}
-              />
-            </View>
-          ))} */}
           <TouchableOpacity onPress={() => Actions.productDetails()}>
             <Image
               style={styles.homeImg}
