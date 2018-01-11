@@ -15,10 +15,18 @@ import HomeDetails from './HomeDetails/HomeDetails';
 import MortgageRates from './MortgageRates/MortgageRates';
 
 export default class ProductDetails extends Component {
+  state = { fill: false }
+  handleHeartFill = () => {
+    this.setState({
+      fill: !this.state.fill
+    });
+  }
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <Header />
+      <View style={styles.container}>
+      <Header />
+      <ScrollView>
+        
         {/* <Image
           style={{ postion: 'absolute', top: 10 }}
           source={require('../../assets/images/transparent-heart-icon.png')}
@@ -27,8 +35,8 @@ export default class ProductDetails extends Component {
           style={{ postion: 'absolute', top: 10 }}
           source={require('../../assets/images/transparent-share-icon.png')}
         /> */}
-        <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 60, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={25} color="#000000" />
-        <Icon style={{ marginLeft: 15, position: 'absolute', right: 45, top: 60, zIndex: 100, backgroundColor: 'transparent' }} name="heart-o" size={25} color="#000000" />
+        <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={25} color="#000000" />
+        <Icon onPress={this.handleHeartFill} style={{ marginLeft: 15, position: 'absolute', right: 45, top: 20, zIndex: 100, backgroundColor: 'transparent' }} name={this.state.fill ? "heart" : "heart-o"} size={25} color="#000000" />
         <Image
           style={styles.img}
           source={require('../../assets/images/east-court-house.png')}
@@ -47,13 +55,17 @@ export default class ProductDetails extends Component {
         <HomeDetails />
         <MortgageRates />
       </ScrollView>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    paddingTop: 40,
+    backgroundColor: '#fff',
+    paddingBottom: 40
   },
   img: {
     width: 375,
