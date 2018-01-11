@@ -17,9 +17,9 @@ export default class HomeImages extends Component {
         <Header />
         <ScrollView>
           <Image style={styles.homeImg} source={require('../../assets/images/east-court-house.png')}/>
-          <Image style={styles.homeImg} source={require('../../assets/images/home-images-2.png')} />
-          <Image style={styles.homeImg} source={require('../../assets/images/home-images-3.png')} />
-          <Image style={[styles.homeImg, { marginBottom: 100 }]} source={require('../../assets/images/home-images-4.png')} />
+          <Image style={styles.homeImg} source={require('../../assets/images/Home-images-2.png')} />
+          <Image style={styles.HomeImg} source={require('../../assets/images/Home-images-3.png')} />
+          <Image style={[styles.homeImg, { marginBottom: 100 }]} source={require('../../assets/images/Home-images-4.png')} />
         </ScrollView>
       </View>
     );
