@@ -9,18 +9,19 @@ import {
 
 import Header from './Header/Header';
 
+// TODO: Loop over these images
 export default class HomeImages extends Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <Header />
-        <View>
+        <ScrollView>
           <Image style={styles.homeImg} source={require('../../assets/images/east-court-house.png')}/>
-          <Image style={styles.homeImg} source={require('../../assets/images/Home-images-2.png')} />
-          <Image style={styles.homeImg} source={require('../../assets/images/Home-images-3.png')} />
-          <Image style={[styles.homeImg, { marginBottom: 100 }]} source={require('../../assets/images/Home-images-4.png')} />
-        </View>
-      </ScrollView>
+          <Image style={styles.homeImg} source={require('../../assets/images/home-images-2.png')} />
+          <Image style={styles.homeImg} source={require('../../assets/images/home-images-3.png')} />
+          <Image style={[styles.homeImg, { marginBottom: 100 }]} source={require('../../assets/images/home-images-4.png')} />
+        </ScrollView>
+      </View>
     );
   }
 }
@@ -28,6 +29,8 @@ export default class HomeImages extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: 40
   },
   homeImg: {
     width: 375,

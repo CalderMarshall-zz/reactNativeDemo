@@ -6,13 +6,14 @@ import {
   StyleSheet,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
 
 export default class Header extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <View style={styles.header}>
-          <Icon style={{ marginLeft: 30 }} name="angle-left" size={40} color="#000000" />
+          <Icon onPress={() => Actions.pop()} style={{ marginLeft: 30 }} name="angle-left" size={40} color="#000000" />
           <Text style={styles.headerText}>230 E Court Dr SW</Text>
         </View>
       </View>
@@ -21,9 +22,6 @@ export default class Header extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
