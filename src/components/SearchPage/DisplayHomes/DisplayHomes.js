@@ -27,7 +27,7 @@ const homes = [{
 export default class DisplayHomes extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.innerContainer}>
           {/* {homes.map((home, index) => (
             <View key={index}>
@@ -56,7 +56,7 @@ export default class DisplayHomes extends Component {
             source={require('../../../assets/images/east-court-house.png')}
           />
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
