@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
   },
   formBottom: {
     height: 30,
-    width: 375,
     backgroundColor: '#ddd',
     flexDirection: 'row',
     alignItems: 'center'

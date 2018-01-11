@@ -24,8 +24,7 @@ export default class SearchPage extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    width: 375
+    flex: 1
   }
 });
 

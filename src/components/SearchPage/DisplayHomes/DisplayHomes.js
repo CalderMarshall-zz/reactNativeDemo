@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   homeImg: {
-    width: 375,
+    width: '100%',
     height: 300
   },
   homeTextContainer: {

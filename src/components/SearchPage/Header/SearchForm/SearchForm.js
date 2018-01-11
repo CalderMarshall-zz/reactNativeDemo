@@ -39,14 +39,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    width: 375,
     height: 60
   },
   input: {
     height: 34,
     borderColor: 'midnightblue',
     borderWidth: 2,
-    flex: 2,
+    flex: 1,
     margin: 2,
     borderRadius: 3,
     padding: 4,
