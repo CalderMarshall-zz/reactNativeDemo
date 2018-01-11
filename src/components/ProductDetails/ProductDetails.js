@@ -6,6 +6,7 @@ import {
   ScrollView,
   Image
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Header from './Header/Header';
 import HomeInfo from './HomeInfo/HomeInfo';
@@ -18,9 +19,19 @@ export default class ProductDetails extends Component {
     return (
       <ScrollView style={styles.container}>
         <Header />
+        {/* <Image
+          style={{ postion: 'absolute', top: 10 }}
+          source={require('../../assets/images/transparent-heart-icon.png')}
+        />
+        <Image
+          style={{ postion: 'absolute', top: 10 }}
+          source={require('../../assets/images/transparent-share-icon.png')}
+        /> */}
+        <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 60, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={25} color="#000000" />
+        <Icon style={{ marginLeft: 15, position: 'absolute', right: 45, top: 60, zIndex: 100, backgroundColor: 'transparent' }} name="heart-o" size={25} color="#000000" />
         <Image
           style={styles.img}
-          source={require('../../assets/images/east-court-house.jpg')}
+          source={require('../../assets/images/east-court-house.png')}
         />
         <HomeInfo />
         <HomeDesc />

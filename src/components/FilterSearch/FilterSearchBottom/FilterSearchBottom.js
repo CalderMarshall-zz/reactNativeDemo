@@ -5,16 +5,15 @@ import {
   View,
   Text,
   FlatList,
-  StyleSheet,
+  StyleSheet
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class FilterSearchBottom extends Component {
   render() {
     return (
-      <View style={{ borderTopColor: 'midnightblue', borderTopWidth: 0.75, borderBottomWidth: 0.75, borderBottomColor: 'midnightblue', marginBottom: 100 }}>
+      <View>
         <FlatList
-          contentContainerStyle={{ alignContent: 'center' }}
           data={[
             {key: 'Buying Type'},
             {key: 'Home Type'},
@@ -23,10 +22,10 @@ export default class FilterSearchBottom extends Component {
             {key: 'Days on Market'},
           ]}
           renderItem={({item}) => (
-            <Text style={styles.listItem}>
-              {item.key}
-              <Icon style={{ position: 'absolute', right: 0 }} name="angle-right" size={25} color="#4E92DF" />
-            </Text>
+            <View style={styles.listContainer}>
+              <Text style={styles.itemText}>{item.key}</Text>
+              <Icon style={{ paddingRight: 20 }} name="angle-right" size={30} color="#4E92DF" />
+            </View>
           )}
         />
       </View>
@@ -35,14 +34,15 @@ export default class FilterSearchBottom extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  listContainer: {
+    borderColor: '#333',
+    borderWidth: 1,
+    flexDirection: 'row',
     alignItems: 'center'
   },
-  listItem: {
-    padding: 10,
-    borderWidth: 0.5,
-    borderColor: 'midnightblue',
+  itemText: {
+    flex: 2,
     fontSize: 16,
-  },
+    padding: 14
+  }
 });

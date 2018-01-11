@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import SearchForm from './SearchForm/SearchForm';
 
@@ -14,13 +15,14 @@ export default class Header extends Component {
     return (
       <View style={styles.container}>
         <SearchForm />
+        <Icon style={{ marginLeft: 15, position: 'absolute', right: 10, top: 64, zIndex: 100, backgroundColor: 'transparent' }} name="share" size={20} color="#02214B" />
         <View style={styles.formBottom}>
           <Text style={{ marginLeft: 8, flex: 1 }}>5 Results</Text>
           {/* TODO: Fix that borderLeftWidth & borderLeftColor */}
-          <Image
+          {/* <Image
             style={{ marginRight: 8 }}
             source={require('../../../assets/images/share-icon.jpg')}
-          />
+          /> */}
         </View>
       </View>
     );
@@ -29,7 +31,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginTop: 10,
   },
   formBottom: {
     height: 30,
@@ -39,3 +41,4 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
+

@@ -45,15 +45,15 @@ export default class DisplayHomes extends Component {
           ))} */}
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.jpg')}
+            source={require('../../../assets/images/east-court-house.png')}
           />
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.jpg')}
+            source={require('../../../assets/images/east-court-house.png')}
           />
           <Image
             style={styles.homeImg}
-            source={require('../../../assets/images/east-court-house.jpg')}
+            source={require('../../../assets/images/east-court-house.png')}
           />
         </View>
       </View>

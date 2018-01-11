@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
   StyleSheet,
+  Image
 } from 'react-native';
 
 export default class SearchForm extends Component {
@@ -14,7 +15,10 @@ export default class SearchForm extends Component {
     return (
       <View>
         <View style={styles.form}>
-          <Text style={styles.text}>[Logo]</Text>
+          <Image
+            style={styles.logo}
+            source={require('../../../../assets/images/one-place-logo.png')}
+          />
           <TextInput
             style={styles.input}
             onChangeText={(search) => this.setState({search})}
@@ -33,6 +37,7 @@ const styles = StyleSheet.create({
   form: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-around',
     width: 375,
     height: 60
   },
@@ -49,7 +54,13 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'midnightblue',
-    marginLeft: 8,
-    marginRight: 8
+    marginLeft: 10,
+    marginRight: 10
+  },
+  logo: {
+    width: 25,
+    height: 25,
+    marginLeft: 10,
+    marginRight: 10
   }
 });

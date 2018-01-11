@@ -19,15 +19,21 @@ export default class MortgageRates extends Component {
             <Text style={{ fontWeight: '300' }}>/month</Text>
           </Text>
           <Text style={{ fontSize: 13, color: '#797979', marginBottom: 20 }}>$392,000 listing price</Text>
-          {/* <Image source={require('')} /> */}
-          <Text style={styles.graphDetails}>Principle And Interest</Text>
-          {/* <Image source={require('')} /> */}
-          <Text style={styles.graphDetails}>Property Tax</Text>
-          {/* <Image source={require('')} /> */}
-          <Text style={styles.graphDetails}>Other Expenses</Text>
+          <View style={styles.graphCategoryContainer}>
+            <Image style={{width: 15, height: 15 }} source={require('../../../assets/images/Rectangle-light-blue.png')} />
+            <Text style={styles.graphDetails}>Principle And Interest</Text>
+          </View>
+          <View style={styles.graphCategoryContainer}>
+            <Image style={{width: 15, height: 15 }} source={require('../../../assets/images/Rectangle-gold.png')} />
+            <Text style={styles.graphDetails}>Property Tax</Text>
+          </View>
+          <View style={styles.graphCategoryContainer}>
+            <Image style={{width: 15, height: 15 }} source={require('../../../assets/images/Rectangle-dark-blue.png')} />
+            <Text style={styles.graphDetails}>Other Expenses</Text>
+          </View>
         </View>
         <View style={styles.graphContainer}>
-          <Image style={styles.graph} source={require('../../../assets/images/graph.jpg')} />
+          <Image style={styles.graph} source={require('../../../assets/images/graph.png')} />
         </View>
       </View>
     );
@@ -35,6 +41,9 @@ export default class MortgageRates extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginBottom: 40
+  },
   graphContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -46,6 +55,11 @@ const styles = StyleSheet.create({
   },
   graphDetails: {
     fontSize: 14,
-    marginBottom: 10
+    marginBottom: 10,
+    marginLeft: 10
+  },
+  graphCategoryContainer: {
+    flexDirection: 'row',
+    alignContent: 'center'
   }
 });
