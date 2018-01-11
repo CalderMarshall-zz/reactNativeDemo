@@ -27,7 +27,7 @@ export default class SearchForm extends Component {
             placeholder='Address, City, Zip'
             placeholderTextColor='#787878'
           />
-          <Text onPress={() => Actions.filterSearch()} style={styles.text}>Filter</Text>
+          <Text onPress={() => Actions.filterSearch()} style={styles.filterText}>Filter</Text>
         </View>
       </View>
     );
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
     fontSize: 20
   },
-  text: {
+  filterText: {
     color: 'midnightblue',
     marginLeft: 10,
     marginRight: 10
