@@ -5,6 +5,7 @@ import { Icon } from "native-base";
 import Home from './components/Home/Home'
 import SearchPage from './components/SearchPage/SearchPage';
 import FilterSearch from './components/FilterSearch/FilterSearch';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 SearchIcon = () => {
         return (
@@ -84,12 +85,6 @@ const RouterComponent = () => {
                         icon={this.SearchIcon}
                     />
                     <Scene
-                        key="filterSearch"
-                        hideNavBar
-                        component={FilterSearch}
-                        sceneStyle={{ display: "none" }}
-                    />
-                    <Scene
                         key="myPlace"
                         hideNavBar
                         icon={this.MyPlaceIcon}
@@ -153,6 +148,18 @@ const RouterComponent = () => {
                     {/*hideTabBar*/}
                     {/*hideNavBar*/}
                 {/*/>*/}
+                <Scene
+                  key="filterSearch"
+                  hideNavBar
+                  component={FilterSearch}
+                  sceneStyle={{ display: "none" }}
+                />
+                <Scene
+                  key="productDetails"
+                  hideNavBar
+                  component={ProductDetails}
+                  sceneStyle={{ display: "none" }}
+                />
 
             </Stack>
         </Router>
@@ -160,8 +167,8 @@ const RouterComponent = () => {
 };
 const style = StyleSheet.create({
     tabBarStyle: {
-        // height: 65,
-        justifyContent: "space-between",
+        height: 65,
+        // justifyContent: "space-between",
         backgroundColor: "white",
     },
     icons: {

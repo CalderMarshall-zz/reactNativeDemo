@@ -36,6 +36,7 @@ export default class FilterSearchBottom extends Component {
 const styles = StyleSheet.create({
   listContainer: {
     borderColor: '#333',
+    backgroundColor: '#FFF',
     borderWidth: 1,
     flexDirection: 'row',
     alignItems: 'center'
