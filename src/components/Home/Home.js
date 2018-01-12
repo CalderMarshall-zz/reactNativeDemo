@@ -335,6 +335,7 @@ export default class Home extends Component {
                             <Card style={{backgroundColor: '#01224A', width: deviceWidth - 20, borderColor: 'transparent',shadowOpacity: 0.75,
                                 shadowRadius: 5,
                                 marginTop: 20,
+                                marginBottom: 30,
                                 shadowColor: 'black',
                                 shadowOffset: {height: 0, width: 0},}}>
                                 <Image
@@ -361,6 +362,7 @@ const style = {
         width: deviceWidth,
         // backgroundColor: 'transparent',
         justifyContent: 'center',
+        flex: 1,
     },
     innerViewContainer: {
         flexDirection: 'column',
