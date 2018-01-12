@@ -86,7 +86,7 @@ export default class Community extends Component {
 
                                 </ImageBackground>
 
-                                <Card style={{borderColor: 'transparent'}}>
+                                <Card style={{borderColor: 'transparent', marginLeft: 0, marginBottom: 0, shadowOpacity: 0}}>
                                     <CardItem style={style.borderCard}>
                                         <Left style={{marginRight: -100}}>
                                             <Image style={style.socialImg}
@@ -94,7 +94,7 @@ export default class Community extends Component {
                                                resizeMode='cover'
                                             />
                                         </Left>
-                                        <Body>
+                                        <Body style={{justifyContent: 'center'}}>
                                         <Text style={{fontSize: 14}}>
                                            Follow us on Facebook for the latest Updates
                                         </Text>
@@ -107,7 +107,7 @@ export default class Community extends Component {
                                                resizeMode='cover'
                                             />
                                         </Left>
-                                        <Body>
+                                        <Body style={{justifyContent: 'center'}}>
                                         <Text style={{fontSize: 14}}>
                                            Follow us on Twitter to see what we're doing!
                                         </Text>
@@ -120,10 +120,10 @@ export default class Community extends Component {
                                                resizeMode='cover'
                                             />
                                         </Left>
-                                        <Body>
-                                        <Text style={{fontSize: 14}}>
-                                           Follow us on Instagram to capture our essence!
-                                        </Text>
+                                        <Body style={{justifyContent: 'center'}}>
+                                            <Text style={{fontSize: 14}}>
+                                            Follow us on Instagram to capture our essence!
+                                            </Text>
                                         </Body>
                                     </CardItem>
                                     <CardItem style={style.borderCard}>
@@ -133,7 +133,7 @@ export default class Community extends Component {
                                                resizeMode='cover'
                                             />
                                         </Left>
-                                        <Body>
+                                        <Body style={{justifyContent: 'center'}}>
                                         <Text style={{fontSize: 14}}>
                                            Subscribe to our Youtube Channel and get our up-to-date home tips
                                         </Text>
@@ -186,9 +186,9 @@ const style = {
     socialImg: {
         height: 65,
         width: 100,
-        marginTop: -10,
-        marginBottom: -10,
-        marginLeft: -20
+        // marginTop: -10,
+        // marginBottom: -10,
+        // marginLeft: -20
     },
     borderCard: {
         borderColor: 'gray',
@@ -196,6 +196,10 @@ const style = {
         borderBottomWidth: 1,
         width: deviceWidth,
         marginVertical: 5,
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        paddingLeft: 0,
+        paddingTop: 0,
+        paddingBottom: 0,
+        flexDirection: 'row',
     }
 };
