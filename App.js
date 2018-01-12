@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import * as firebase from 'firebase';
+import PropTypes from 'prop-types';
+import { StyleSheet, View, ImageBackground, Image, Dimensions, TextInput } from 'react-native';
+import * as firebase from "firebase";
+import Router from './src/components/Router';
 
-import Router from './src/Router';
+// Initialize Firebase
 
 var config = {
   apiKey: "AIzaSyB5CYcJfw_B0FTDi1ZNERHd6eCoSzootS8",
