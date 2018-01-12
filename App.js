@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View, ImageBackground, Image, Dimensions, TextInput } from 'react-native';
 import * as firebase from "firebase";
-import Router from './src/components/Router';
+import Router from './src/Router';
 
 // Initialize Firebase
 
