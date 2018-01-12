@@ -46,7 +46,7 @@ export default class Login extends Component {
         .auth()
         .signInWithEmailAndPassword(this.state.email, this.state.password)
         .then(data => {
-          Actions.home();
+          Actions.myPlace();
         })
     }
   };

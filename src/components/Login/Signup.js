@@ -42,7 +42,7 @@ export default class Signup extends Component {
                     email: this.state.email,
                     userId: data.uid
                 });
-                Actions.home();
+                Actions.myPlace();
             }).catch(error => {
                 alert(error)
             })
