@@ -66,7 +66,7 @@ const RouterComponent = () => {
                     <Scene
                         key="search"
                         hideNavBar
-                        component={Home}
+                        component={SearchPage}
                         icon={this.SearchIcon}
                     />
                     <Scene
@@ -115,11 +115,25 @@ const RouterComponent = () => {
                   sceneStyle={{ display: "none" }}
                   component={Signup}
                 />
+                <Scene
+                  key="productDetails"
+                  hideNavBar
+                  sceneStyle={{ display: "none" }}
+                  component={ProductDetails}
+                />
+                <Scene
+                  key="homeImages"
+                  hideTabBar
+                  hideNavBar
+                  sceneStyle={{ display: "none" }}
+                  component={HomeImages}
+                />
+                
 
 
 
 
-
+                
                 {/*<Scene*/}
                     {/*key="settings"*/}
                     {/*component={SettingsPage}*/}
