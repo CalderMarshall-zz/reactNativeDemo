@@ -70,7 +70,7 @@ const RouterComponent = () => {
                         icon={this.SearchIcon}
                     />
                     <Scene
-                        key="myPlace"
+                        key="radioButton"
                         hideNavBar
                         icon={this.MyPlaceIcon}
                         component={Home}

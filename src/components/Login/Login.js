@@ -17,7 +17,6 @@ import {
   Content,
   Button
 } from "native-base";
-import * as firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 
 //Variables for users device height and width
@@ -34,28 +33,11 @@ export default class Login extends Component {
     };
   }
 
-  componenDidMount() {
-    console.log("THis is a console");
-  }
-
-  handleLoginSubmit = () => {
-    if(this.state.password === "" || this.state.email === "") {
-      alert('Please fill in all fields')
-    } else {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then(data => {
-          Actions.myPlace();
-        })
-    }
-  };
 
   render() {
-    console.log("THIS IS LOGIN STATE:", this.state);
     return (
       <ImageBackground
-        source={require("../../assests/images/Login-Image.png")}
+        source={require("../../images/image2.jpg")}
         style={{
           width: deviceWidth,
           height: deviceHeight,
@@ -77,28 +59,21 @@ export default class Login extends Component {
           {/* White Opaque View Container */}
           <View
             style={{
-              height: deviceHeight - 350,
-              width: deviceWidth - 80,
+              height: deviceHeight - 475,
+              width: deviceWidth - 70,
               backgroundColor: "rgba(255, 255, 255, 0.7)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+                borderRadius: 5
             }}
           >
 
             {/* View for Logos */}
             <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 40 }}>
-              {/* <Image
-                source={require('../../assets/images/one-place-logo.png')}
-              /> */}
-              <Image
-                source={require('../../assets/images/one-place-text.png')}
-                style={{
-                  width: deviceWidth - 150,
-                  height: 60
-                }}
-              />
+                <Text style={{ fontSize: 18 }}>Please Login to Continue</Text>
+
             </View>
 
             {/* View Container for Inputs */}
@@ -109,7 +84,7 @@ export default class Login extends Component {
                 alignItems: "flex-end",
                 justifyContent: 'flex-end',
                 flex: 1,
-                marginBottom: 20
+                marginBottom: 30,
               }}
             >
               <TextInput
@@ -165,18 +140,16 @@ export default class Login extends Component {
               height: 50,
               flexDirection: "row",
               justifyContent: "center",
-              backgroundColor: "#0E2E59"
+              backgroundColor: "#F18231"
             }}
-            onPress={() => this.handleLoginSubmit()}
+            onPress={() => Actions.radioButton()}
           >
             <Text style={{ color: "#FFF", fontSize: 23 }}>Sign In</Text>
           </Button>
         </View>
         
         {/* View Container for sign up link */}
-        <View style={{ flexDirection: 'row', justifyContent: 'center', width: deviceWidth - 80, backgroundColor: "rgba(255, 255, 255, 0.7)", marginTop: 100}}>
-            <Text style={{fontSize: 20}}>Don't have an account? </Text><TouchableOpacity onPress={() => Actions.signup()}><Text style={{fontSize: 20, color: '#C39A43'}}>Sign Up</Text></TouchableOpacity>
-        </View>
+
       </ImageBackground>
     );
   }
