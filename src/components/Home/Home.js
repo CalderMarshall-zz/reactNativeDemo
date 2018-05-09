@@ -9,7 +9,6 @@ import {
     ListView,
     FlatList,
     ScrollView,
-
     StatusBar
 } from 'react-native';
 import {
@@ -25,6 +24,7 @@ import {
     Left,
     Icon,
     Body,
+    CheckBox,
     Right,
     Input,
     Spinner
@@ -48,7 +48,11 @@ export default class Home extends Component {
             types: [
                 {label: 'param1', value: 0 },
                 {label: 'param2', value: 1 }
-            ]
+            ],
+            checkbox1: false,
+            checkbox2: false,
+            checkbox3: false,
+            checkbox4: false
         };
 
 
@@ -133,15 +137,43 @@ export default class Home extends Component {
 
 
                         </ScrollView>
-                        <RadioForm
-                            radio_props={this.state.types}
-                            initial={0}
-                            formHorizontal={false}
-                            labelHorizontal={true}
-                            buttonColor={'#2196f3'}
-                            animation={true}
-                            onPress={(value) => {this.setState({value:value})}}
-                        />
+                        <View>
+                            <RadioForm
+                                radio_props={this.state.types}
+                                initial={0}
+                                formHorizontal={false}
+                                labelHorizontal={true}
+                                buttonColor={'#2196f3'}
+                                animation={true}
+                                onPress={(value) => {this.setState({value:value})}}
+                            />
+
+
+                        </View>
+                        <View>
+                            <CheckBox
+                                value={this.state.checkbox1}
+                                onChange={this.value = !this.state.checkbox1}
+                            />
+
+                            <CheckBox
+                                value={this.state.checkbox2}
+                                onChange={this.value = !this.state.checkbox2}
+                            />
+
+                            <CheckBox
+                                value={this.state.checkbox3}
+                                onChange={this.value = !this.state.checkbox3}
+                            />
+                            <CheckBox
+                                value={this.state.checkbox4}
+                                onChange={this.value = !this.state.checkbox4}
+
+                            />
+                        </View>
+
+
+
                     </View>
                 </View>
 
