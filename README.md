@@ -5,3 +5,11 @@ This project uses [react-native-simple-radio-button](https://www.npmjs.com/packa
 
 
  The easiest way to boot this application is to clone the repo, run yarn install, then open the Expo XDE and boot the project from there.  The ios simulator should open, and the app will begin to load.  It might be necessary to keep the simulator and expo xde in the active window to properly boot.
+
+![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/login_screenshot.png)
+
+![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/checkbox_screenshot.jpg)
+
+![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/input_screenshot.jpg)
+
+![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/radio_screenshot.jpg)
