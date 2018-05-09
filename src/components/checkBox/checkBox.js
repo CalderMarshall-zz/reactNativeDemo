@@ -43,17 +43,18 @@ export default class checkBox extends Component {
         super(props);
 
         this.state = {
-            itemSelected: 'hey',
-            itemOneSelected: false,
-            itemTwoSelected: false,
             types: [
                 {label: 'param1', value: 0 },
-                {label: 'param2', value: 1 }
+                {label: 'param2', value: 0 },
+                {label: 'param3', value: 0 },
+                {label: 'param4', value: 0 },
+                {label: 'param5', value: 0 }
             ],
             checkbox1: false,
             checkbox2: false,
             checkbox3: false,
-            checkbox4: false
+            checkbox4: false,
+            checkbox5: false
         };
 
 
@@ -97,25 +98,101 @@ export default class checkBox extends Component {
                 <View style={style.outerViewContainer}>
                     <View style={style.innerViewContainer}>
                         <ScrollView contentContainerStyle={style.scrollViewContentContainer}>
-                            <View style={{paddingBottom: 100}}>
+
+
+                            <Card style={style.question}>
+                                <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Which of these nations have Home Depot?</Text>
+                                <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Check all that Apply</Text>
                                 <CheckBox
                                     center
-                                    title='Click Here to Remove This Item'
+                                    title='United States'
+                                    size="30"
                                     iconRight
                                     iconType='material'
                                     checkedIcon='clear'
                                     uncheckedIcon='add'
-                                    checkedColor='red'
+                                    checkedColor='green'
                                     uncheckedColor="gray"
                                     checked={this.state.checkbox1}
                                     onPress={() => this.setState({checkbox1: !this.state.checkbox1})}
                                 />
+                                <CheckBox
+                                    center
+                                    size="30"
+                                    title='Puerto Rico'
+                                    iconRight
+                                    iconType='material'
+                                    checkedIcon='clear'
+                                    uncheckedIcon='add'
+                                    checkedColor='green'
+                                    uncheckedColor="gray"
+                                    checked={this.state.checkbox2}
+                                    onPress={() => this.setState({checkbox2: !this.state.checkbox2})}
+                                />
+                                <CheckBox
+                                    center
+                                    title='Guam'
+                                    size="30"
+                                    iconRight
+                                    iconType='material'
+                                    checkedIcon='clear'
+                                    uncheckedIcon='add'
+                                    checkedColor='green'
+                                    uncheckedColor="gray"
+                                    checked={this.state.checkbox3}
+                                    onPress={() => this.setState({checkbox3: !this.state.checkbox3})}
+                                />
+                                <CheckBox
+                                    center
+                                    title='Canada'
+                                    size="30"
+                                    iconRight
+                                    iconType='material'
+                                    checkedIcon='clear'
+                                    uncheckedIcon='add'
+                                    checkedColor='green'
+                                    uncheckedColor="gray"
+                                    checked={this.state.checkbox4}
+                                    onPress={() => this.setState({checkbox4: !this.state.checkbox4})}
+                                />
+                                <CheckBox
+                                    center
+                                    title='Mexico'
+                                    size="30"
+                                    iconRight
+                                    iconType='material'
+                                    checkedIcon='clear'
+                                    uncheckedIcon='add'
+                                    checkedColor='green'
+                                    uncheckedColor="gray"
+                                    checked={this.state.checkbox5}
+                                    onPress={() => this.setState({checkbox5: !this.state.checkbox5})}
+                                />
+                            </Card>
+
+
+
+                            <View style={style.buttonView}>
+                                <Button
+                                    large
+                                    style={{
+                                        width: deviceWidth - 120,
+                                        height: 50,
+                                        flexDirection: "row",
+                                        justifyContent: "center",
+                                        backgroundColor: "#DAD9DA"
+                                    }}
+                                    onPress={() => Actions.input()}
+                                >
+                                    <Text style={{ color: "black", fontSize: 24 }}>Next</Text>
+                                </Button>
                             </View>
+
+
+
+
                         </ScrollView>
-                        <View>
 
-
-                        </View>
 
 
 
@@ -174,11 +251,9 @@ const style = {
     radio: {
         width: deviceWidth - 50
     },
-
-
-
     question: {
-        backgroundColor: '#F18231', shadowOpacity: 0.75,
+        backgroundColor: "#DAD9DA",
+        shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'black',
         shadowOffset: {height: 0, width: 0},
@@ -186,14 +261,22 @@ const style = {
         flexDirection: 'column',
         justifyContent: 'space-around',
         alignItems: 'center',
-        paddingVertical: 5,
+        paddingVertical: 20,
+
+    },
+    buttonView: {
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingVertical: 10,
+
     },
     questionItem: {
-        marginVertical: 3,
+        marginVertical: 10,
         width: deviceWidth - 25,
         flexDirection: 'row',
-        backgroundColor: '#F18231',
-        justifyContent: 'space-between'
+        backgroundColor: "#DAD9DA",
+        justifyContent: 'space-around',
     },
 
 };

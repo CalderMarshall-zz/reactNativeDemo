@@ -199,9 +199,6 @@ const style = {
     radio: {
         width: deviceWidth - 50
     },
-
-
-
     question: {
         backgroundColor: "#DAD9DA",
         shadowOpacity: 0.75,
@@ -213,7 +210,7 @@ const style = {
         justifyContent: 'space-around',
         alignItems: 'center',
         paddingVertical: 20,
-        textAlign: 'center'
+
     },
     buttonView: {
         flexDirection: 'column',
@@ -227,7 +224,7 @@ const style = {
         width: deviceWidth - 25,
         flexDirection: 'row',
         backgroundColor: "#DAD9DA",
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
 
 };
