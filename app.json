@@ -2,8 +2,8 @@
   "expo": {
     "sdkVersion": "23.0.0",
     "splash": {
-      "image": "./src/images/Home-Depot.jpg",
-      "resizeMode": "cover"
+      "image": "./src/images/hd01.jpg",
+      "resizeMode": "contain"
     }
   }
 }

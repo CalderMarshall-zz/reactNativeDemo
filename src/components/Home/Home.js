@@ -29,7 +29,8 @@ import {
     Spinner
 } from 'native-base';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-import CheckBox from 'react-native-checkbox';
+import { CheckBox } from 'react-native-elements'
+
 import {Actions, ActionConst} from 'react-native-router-flux';
 import {Divider} from '@shoutem/ui';
 
@@ -58,8 +59,10 @@ export default class Home extends Component {
 
     }
 
-    render() {
 
+
+    render() {
+        console.log("this.state.checkbox1", this.state.checkbox1);
         return (
             <Container style={{backgroundColor: '#FFF', display: 'flex', flex: 1}}>
                 <Header
@@ -150,12 +153,21 @@ export default class Home extends Component {
 
 
                         </View>
-                        <View>
+                        <View style={{paddingBottom: 100}}>
                             <CheckBox
-                                label='Label'
-                                checked={true}
-                                onChange={(checked) => (checked = !checked)}
+                                center
+                                title='Click Here to Remove This Item'
+                                iconRight
+                                iconType='material'
+                                checkedIcon='clear'
+                                uncheckedIcon='add'
+                                checkedColor='#2B98F0'
+                                uncheckedColor="gray"
+                                checked={this.state.checkbox1}
+                                onPress={() => this.setState({checkbox1: !this.state.checkbox1})}
                             />
+
+
                         </View>
 
 
