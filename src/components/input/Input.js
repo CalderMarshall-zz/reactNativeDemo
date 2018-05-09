@@ -99,7 +99,7 @@ export default class inputBox extends Component {
                             <Card style={style.question}>
                                 <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Type Your Favorite Color</Text>
                                 <TextInput
-                                    placeholder="Email"
+                                    placeholder="Your Color"
                                     placeholderTextColor="#000"
                                     style={{
                                         height: 50,
