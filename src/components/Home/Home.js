@@ -24,12 +24,12 @@ import {
     Left,
     Icon,
     Body,
-    CheckBox,
     Right,
     Input,
     Spinner
 } from 'native-base';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import CheckBox from 'react-native-checkbox';
 import {Actions, ActionConst} from 'react-native-router-flux';
 import {Divider} from '@shoutem/ui';
 
@@ -152,23 +152,9 @@ export default class Home extends Component {
                         </View>
                         <View>
                             <CheckBox
-                                value={this.state.checkbox1}
-                                onChange={this.value = !this.state.checkbox1}
-                            />
-
-                            <CheckBox
-                                value={this.state.checkbox2}
-                                onChange={this.value = !this.state.checkbox2}
-                            />
-
-                            <CheckBox
-                                value={this.state.checkbox3}
-                                onChange={this.value = !this.state.checkbox3}
-                            />
-                            <CheckBox
-                                value={this.state.checkbox4}
-                                onChange={this.value = !this.state.checkbox4}
-
+                                label='Label'
+                                checked={true}
+                                onChange={(checked) => (checked = !checked)}
                             />
                         </View>
 
