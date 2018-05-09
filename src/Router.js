@@ -11,6 +11,7 @@ import {Icon} from "native-base";
 import Radio from './components/Home/Home'
 import Login from "./components/Login/Login";
 import checkBox from "./components/checkBox/checkBox";
+import inputBox from "./components/input/Input"
 
 const RouterComponent = () => {
     return (
@@ -39,6 +40,11 @@ const RouterComponent = () => {
                     key="checkBox"
                     sceneStyle={{display: "none"}}
                     component={checkBox}
+                />
+                <Scene
+                    key="input"
+                    sceneStyle={{display: "none"}}
+                    component={inputBox}
                 />
             </Stack>
         </Router>

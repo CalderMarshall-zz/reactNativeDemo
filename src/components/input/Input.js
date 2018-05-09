@@ -38,28 +38,24 @@ const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 
-export default class checkBox extends Component {
+export default class inputBox extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            types: [
-                {label: 'param1', value: 0 },
-                {label: 'param2', value: 0 },
-                {label: 'param3', value: 0 },
-                {label: 'param4', value: 0 },
-                {label: 'param5', value: 0 }
-            ],
-            checkbox1: false,
-            checkbox2: false,
-            checkbox3: false,
-            checkbox4: false,
-            checkbox5: false
+            color: ""
         };
 
 
-    }
 
+    }
+        showColor = () => {
+            return (
+                <View>
+                    <Text>You chose {this.state.color}</Text>
+                </View>
+            )
+        };
 
 
     render() {
@@ -77,7 +73,7 @@ export default class checkBox extends Component {
                 >
                     <Left>
                         <TouchableOpacity style={{height: 30, width: 30, marginTop: 20}}
-                        onPress={() => Actions.pop()}>
+                                          onPress={() => Actions.pop()}>
                             <Text style={{fontSize: 24}}>{"<"}</Text>
                         </TouchableOpacity>
                     </Left>
@@ -101,69 +97,44 @@ export default class checkBox extends Component {
 
 
                             <Card style={style.question}>
-                                <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Which of these nations have Home Depot?</Text>
-                                <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Check all that Apply</Text>
-                                <CheckBox
-                                    center
-                                    title='United States'
-                                    iconRight
-                                    iconType='material'
-                                    checkedIcon='clear'
-                                    uncheckedIcon='add'
-                                    checkedColor='green'
-                                    uncheckedColor="gray"
-                                    checked={this.state.checkbox1}
-                                    onPress={() => this.setState({checkbox1: !this.state.checkbox1})}
+                                <Text style={{color: 'black', fontSize: 16, paddingVertical: 10}}>Type Your Favorite Color</Text>
+                                <TextInput
+                                    placeholder="Email"
+                                    placeholderTextColor="#000"
+                                    style={{
+                                        height: 50,
+                                        width: deviceWidth / 1.5,
+                                        marginVertical: 30,
+                                        borderBottomColor: "#000",
+                                        borderBottomWidth: 2,
+                                        borderTopWidth: 0,
+                                        borderLeftWidth: 0,
+                                        borderRightWidth: 0
+                                    }}
+                                    onChangeText={(color) => this.setState({ color })}
+                                    autoCapitalize={'none'}
                                 />
-                                <CheckBox
-                                    center
-                                    title='Puerto Rico'
-                                    iconRight
-                                    iconType='material'
-                                    checkedIcon='clear'
-                                    uncheckedIcon='add'
-                                    checkedColor='green'
-                                    uncheckedColor="gray"
-                                    checked={this.state.checkbox2}
-                                    onPress={() => this.setState({checkbox2: !this.state.checkbox2})}
-                                />
-                                <CheckBox
-                                    center
-                                    title='Guam'
-                                    iconRight
-                                    iconType='material'
-                                    checkedIcon='clear'
-                                    uncheckedIcon='add'
-                                    checkedColor='green'
-                                    uncheckedColor="gray"
-                                    checked={this.state.checkbox3}
-                                    onPress={() => this.setState({checkbox3: !this.state.checkbox3})}
-                                />
-                                <CheckBox
-                                    center
-                                    title='Canada'
-                                    iconRight
-                                    iconType='material'
-                                    checkedIcon='clear'
-                                    uncheckedIcon='add'
-                                    checkedColor='green'
-                                    uncheckedColor="gray"
-                                    checked={this.state.checkbox4}
-                                    onPress={() => this.setState({checkbox4: !this.state.checkbox4})}
-                                />
-                                <CheckBox
-                                    center
-                                    title='Mexico'
-                                    iconRight
-                                    iconType='material'
-                                    checkedIcon='clear'
-                                    uncheckedIcon='add'
-                                    checkedColor='green'
-                                    uncheckedColor="gray"
-                                    checked={this.state.checkbox5}
-                                    onPress={() => this.setState({checkbox5: !this.state.checkbox5})}
-                                />
+
+
                             </Card>
+
+
+
+                            {/*<View style={style.buttonView}>*/}
+                                {/*<Button*/}
+                                    {/*large*/}
+                                    {/*style={{*/}
+                                        {/*width: deviceWidth - 120,*/}
+                                        {/*height: 50,*/}
+                                        {/*flexDirection: "row",*/}
+                                        {/*justifyContent: "center",*/}
+                                        {/*backgroundColor: "#DAD9DA"*/}
+                                    {/*}}*/}
+                                    {/*onPress={() => Actions.login()}*/}
+                                {/*>*/}
+                                    {/*<Text style={{ color: "black", fontSize: 24 }}>Submit</Text>*/}
+                                {/*</Button>*/}
+                            {/*</View>*/}
 
 
 
@@ -177,11 +148,14 @@ export default class checkBox extends Component {
                                         justifyContent: "center",
                                         backgroundColor: "#DAD9DA"
                                     }}
-                                    onPress={() => Actions.input()}
+                                    onPress={() => Actions.login()}
                                 >
-                                    <Text style={{ color: "black", fontSize: 24 }}>Next</Text>
+                                    <Text style={{ color: "black", fontSize: 24 }}>Back to Login</Text>
                                 </Button>
                             </View>
+
+
+
 
 
 
@@ -272,6 +246,9 @@ const style = {
         flexDirection: 'row',
         backgroundColor: "#DAD9DA",
         justifyContent: 'space-around',
+    },
+    colorView: {
+        width: deviceWidth - 50,
     },
 
 };
