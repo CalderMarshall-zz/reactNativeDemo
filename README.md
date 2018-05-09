@@ -12,4 +12,4 @@ This project uses [react-native-simple-radio-button](https://www.npmjs.com/packa
 
 ![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/input_screenshot.jpg)
 
-![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/radio_screenshot.jpg)
+![alt text](https://github.com/CalderMarshall/reactNativeDemo/blob/master/src/images/radio_screeenshot.jpg)
