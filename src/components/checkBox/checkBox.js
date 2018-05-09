@@ -38,7 +38,7 @@ const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 
-export default class Radio extends Component {
+export default class checkBox extends Component {
     constructor(props) {
         super(props);
 
@@ -47,11 +47,8 @@ export default class Radio extends Component {
             itemOneSelected: false,
             itemTwoSelected: false,
             types: [
-                {label: 'Shovels', value: 0 },
-                {label: 'Paint', value: 0 },
-                {label: 'Epoxy', value: 0 },
-                {label: 'Chicken', value: 0 },
-
+                {label: 'param1', value: 0 },
+                {label: 'param2', value: 1 }
             ],
             checkbox1: false,
             checkbox2: false,
@@ -78,10 +75,8 @@ export default class Radio extends Component {
                     }}
                 >
                     <Left>
-                        <TouchableOpacity
-                            style={{height: 30, width: 30, marginTop: 20}}
-                            onPress={() => Actions.pop()}
-                        >
+                        <TouchableOpacity style={{height: 30, width: 30, marginTop: 20}}
+                        onPress={() => Actions.pop()}>
                             <Text style={{fontSize: 24}}>{"<"}</Text>
                         </TouchableOpacity>
                     </Left>
@@ -102,45 +97,25 @@ export default class Radio extends Component {
                 <View style={style.outerViewContainer}>
                     <View style={style.innerViewContainer}>
                         <ScrollView contentContainerStyle={style.scrollViewContentContainer}>
-
-
-
-
-                            <Card style={style.question}>
-                                <Text style={{color: 'black', fontSize: 20}}>Which of these does Home Depot not sell?</Text>
-                                    <CardItem style={style.questionItem}>
-                                        <RadioForm
-                                            radio_props={this.state.types}
-                                            initial={0}
-                                            formHorizontal={true}
-                                            labelHorizontal={false}
-                                            buttonInnerColor={"#2B98F0"}
-                                            buttonColor={"#2B98F0"}
-                                            animation={true}
-                                            labelStyle={{fontSize: 20, color: 'black', paddingTop: 10}}
-                                            onPress={(value) => {this.setState({value:value})}}
-                                        />
-                                </CardItem>
-                            </Card>
-                            <View style={style.buttonView}>
-                                <Button
-                                    large
-                                    style={{
-                                        width: deviceWidth - 120,
-                                        height: 50,
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        backgroundColor: "#DAD9DA"
-                                    }}
-                                    onPress={() => Actions.checkBox()}
-                                >
-                                    <Text style={{ color: "black", fontSize: 24 }}>Next</Text>
-                                </Button>
+                            <View style={{paddingBottom: 100}}>
+                                <CheckBox
+                                    center
+                                    title='Click Here to Remove This Item'
+                                    iconRight
+                                    iconType='material'
+                                    checkedIcon='clear'
+                                    uncheckedIcon='add'
+                                    checkedColor='red'
+                                    uncheckedColor="gray"
+                                    checked={this.state.checkbox1}
+                                    onPress={() => this.setState({checkbox1: !this.state.checkbox1})}
+                                />
                             </View>
-
-
-
                         </ScrollView>
+                        <View>
+
+
+                        </View>
 
 
 
@@ -203,8 +178,7 @@ const style = {
 
 
     question: {
-        backgroundColor: "#DAD9DA",
-        shadowOpacity: 0.75,
+        backgroundColor: '#F18231', shadowOpacity: 0.75,
         shadowRadius: 5,
         shadowColor: 'black',
         shadowOffset: {height: 0, width: 0},
@@ -212,22 +186,14 @@ const style = {
         flexDirection: 'column',
         justifyContent: 'space-around',
         alignItems: 'center',
-        paddingVertical: 20,
-        textAlign: 'center'
-    },
-    buttonView: {
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        paddingVertical: 10,
-
+        paddingVertical: 5,
     },
     questionItem: {
-        marginVertical: 10,
+        marginVertical: 3,
         width: deviceWidth - 25,
         flexDirection: 'row',
-        backgroundColor: "#DAD9DA",
-        justifyContent: 'space-around'
+        backgroundColor: '#F18231',
+        justifyContent: 'space-between'
     },
 
 };

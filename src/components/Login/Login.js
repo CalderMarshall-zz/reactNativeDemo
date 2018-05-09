@@ -59,7 +59,7 @@ export default class Login extends Component {
           {/* White Opaque View Container */}
           <View
             style={{
-              height: deviceHeight - 475,
+              height: deviceHeight - 525,
               width: deviceWidth - 70,
               backgroundColor: "rgba(255, 255, 255, 0.7)",
               display: "flex",
